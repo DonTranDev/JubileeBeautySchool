@@ -1,32 +1,105 @@
-<!doctype html>
-<html>
-<link href="main.css" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>JulibeeBeautySchool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jubilee Beauty School</title>
+<style>
+    body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+    }
+    .image-container {
+        position: fixed; /* Set position to fixed */
+        top: 50px; /* Adjust top position as needed */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+    .image {
+        /* Add styling for the image */
+    }
+    .menu-container {
+        position: fixed; /* Set position to fixed */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+    .menu-button {
+        background-color: #87ceeb; /* baby blue */
+        color: white;
+        padding: 20px 30px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+    .dropdown {
+        position: absolute;
+        top: calc(100% + 2px); /* Position directly below the button */
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        min-width: 160px;
+        background-color: #fffacd; /* light gold */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border: 1px solid #87ceeb; /* baby blue */
+        border-top: none;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        border-top: 1px solid #87ceeb; /* baby blue */
+    }
+    .dropdown-content a:hover {
+        background-color: #ffe4b5; /* lighter gold on hover */
+    }
+    .menu-container:hover .dropdown,
+    .dropdown:hover {
+        display: block;
+        animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
 </head>
 <body>
-<h1>Julibee Beauty School</h1>
-<h3>Welcome to the Julibee Beauty School Webpage</h3>
-<h2>Programs:</h2>
-<ul>
-<li><a href="page2.html">Manicure</a></li>
-<p>This program covers manicures, pedicures, artifical nails, nail tips, nail wrap, acrylic nails, disease and disorder  
--Requires 600 hours</p>
-<li><a href="page3.html">Cosmetology</a></li>
-<p>This program covers coloring, high-lights, perms, straight perms, thermal iron, up-do, facials, manicures, hair-cuts for men and women, and styling
--Requires 1600 hours</p> 
-<li><a href="page4.html">Esthetician</a></li>
-<p>This program covers spa facials, facial massages, touch therapy techniques, microdermabrasion, facial and body waxing, and make-up
--Requires 750 hours</p>
-<li><a href="page5.html">Barber</a></li>
-<p>This program covers hair-cuts for men and women, hair styling, perms, straight perms, and shaving
--Requires 1000 hours</p>
-<li><a href="page6.html">Instructor</a></li>
-<p>This program covers advanced techniques related to your field, how to develop and effective curriculum, and how to be an effective instructor
--Requires 500 hours</p>
 
-</ul>
+<div class="image-container">
+    <!-- Image -->
+    <img class="image" src="C:\Users\dontr\OneDrive\Pictures\IMG_4932.jpg" alt="Jubilee Beauty School">
+</div>
+
+<div class="menu-container">
+    <!-- Menu button -->
+    <button class="menu-button">Menu</button>
+    <!-- Dropdown menu -->
+    <div class="dropdown" id="myDropdown">
+        <div class="dropdown-content">
+            <a href="page2.html">Manicure</a>
+            <a href="page3.html">Cosmetology</a>
+            <a href="page4.html">Esthetician</a>
+            <a href="page5.html">Barber</a>
+            <a href="page6.html">Instructor</a>
+            <a href="page7.html">Contact Us</a>
+            <a href="paeg8.html">TBA</a>
+        </div>
+    </div>
+</div>
+
 </body>
+</html>
+
+
 
 
 </html>
