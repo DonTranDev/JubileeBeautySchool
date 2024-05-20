@@ -6,38 +6,35 @@
 <title>Jubilee Beauty School</title>
 <style>
     body {
-        font-family: Georgia, serif;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
     }
     .image-container {
-        position: fixed; /* Set position to fixed */
-        top: 50px; /* Adjust top position as needed */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
-        z-index: 1; /* Ensure it appears above other content */
+        position: relative; /* Change to relative positioning */
+        text-align: center; /* Center the image */
+        margin-bottom: 20px; /* Add some space below the image */
     }
     .image {
-        /* Add styling for the image */
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
     }
     .menu-container {
-        position: fixed; /* Set position to fixed */
-        top: 50%; /* Center vertically */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-        z-index: 1; /* Ensure it appears above other content */
+        position: relative; /* Change to relative positioning */
+        text-align: center; /* Center the menu */
     }
     .menu-button {
         background-color: #87ceeb; /* baby blue */
         color: white;
-        padding: 20px 30px;
+        padding: 15px 25px;
         cursor: pointer;
         border: none;
         border-radius: 5px;
+        font-size: 16px;
     }
     .dropdown {
         position: absolute;
-        top: calc(100% + 2px); /* Position directly below the button */
+        top: calc(100% + 2px);
         left: 50%;
         transform: translateX(-50%);
         display: none;
@@ -73,6 +70,7 @@
 </style>
 </head>
 <body>
+
 
 <div class="image-container">
     <!-- Image -->
