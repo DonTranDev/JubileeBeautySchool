@@ -3,20 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <title>Login</title>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <h2>Register</h2>
-    <form id="registerForm">
-        <label for="registerUsername">Username:</label>
-        <input type="text" id="registerUsername" name="username" required>
-        <br>
-        <label for="registerPassword">Password:</label>
-        <input type="password" id="registerPassword" name="password" required>
-        <br>
-        <button type="submit">Register</button>
-    </form>
-
     <h2>Login</h2>
     <form id="loginForm">
         <label for="loginUsername">Username:</label>
@@ -27,106 +17,7 @@
         <br>
         <button type="submit">Login</button>
     </form>
-
-    <h2>Clock-In/Out</h2>
-    <button id="clockInButton">Clock In</button>
-    <button id="clockOutButton">Clock Out</button>
-
-    <h2>View Hours Worked</h2>
-    <button id="viewHoursButton">View Hours</button>
-
-    <script>
-        // Register Form Submission
-        document.getElementById('registerForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const username = document.getElementById('registerUsername').value;
-            const password = document.getElementById('registerPassword').value;
-
-            try {
-                const response = await fetch('/register', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username, password })
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Registration failed');
-            }
-        });
-
-        // Login Form Submission
-        document.getElementById('loginForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
-
-            try {
-                const response = await fetch('/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username, password })
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Login failed');
-            }
-        });
-
-        // Clock In
-        document.getElementById('clockInButton').addEventListener('click', async function () {
-            try {
-                const response = await fetch('/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username: 'testUser', password: 'testPass' }) // Replace with dynamic values if needed
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Clock-in failed');
-            }
-        });
-
-        // Clock Out
-        document.getElementById('clockOutButton').addEventListener('click', async function () {
-            try {
-                const response = await fetch('/clockout', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Clock-out failed');
-            }
-        });
-
-        // View Hours Worked
-        document.getElementById('viewHoursButton').addEventListener('click', async function () {
-            try {
-                const response = await fetch('/hours', {
-                    method: 'GET',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Failed to retrieve hours worked');
-            }
-        });
-    </script>
 </body>
 </html>
+
 
