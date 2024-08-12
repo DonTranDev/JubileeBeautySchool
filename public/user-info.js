@@ -25,3 +25,4 @@ document.getElementById('logoutButton').addEventListener('click', async () => {
     }
 });
 
+
