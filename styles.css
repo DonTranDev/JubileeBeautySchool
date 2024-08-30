@@ -51,11 +51,13 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background: url('IMG_4932.jpg') no-repeat center center/cover;
+    background: url('IMG_4932.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire area */
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 0;
     position: relative;
+    height: 100vh; /* Make the hero section the full height of the viewport */
     overflow: hidden;
 }
 
@@ -64,6 +66,7 @@ nav ul li a {
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    padding: 100px 20px; /* Add padding for text */
 }
 
 /* Parallax Effect */
@@ -178,3 +181,4 @@ footer {
         flex: 1;
     }
 }
+
