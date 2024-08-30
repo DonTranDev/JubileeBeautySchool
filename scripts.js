@@ -1,16 +1,10 @@
-// Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    var hero = document.querySelector('.hero');
+    hero.style.backgroundImage = 'url("IMG_4932.jpg")'; // Correctly set background
 });
 
-// Parallax effect for the hero section
+// Optional parallax effect
 window.addEventListener('scroll', function() {
-    const parallax = document.querySelector('.hero');
-    const scrollPosition = window.pageYOffset;
-    parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + 'px';
+    var hero = document.querySelector('.hero');
+    hero.style.backgroundPositionY = -(window.pageYOffset * 0.5) + 'px';
 });
