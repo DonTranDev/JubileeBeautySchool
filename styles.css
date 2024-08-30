@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
     background: #003366;
     color: white;
@@ -41,6 +43,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
@@ -68,6 +71,7 @@ nav ul li a {
     background-color: #ffb300;
 }
 
+/* Sections */
 section {
     padding: 60px 20px;
 }
@@ -77,6 +81,7 @@ section {
     margin: 0 auto;
 }
 
+/* Services Grid */
 .services-grid {
     display: flex;
     gap: 20px;
@@ -96,9 +101,53 @@ section {
     transform: scale(1.05);
 }
 
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #FFD700;
+    color: #003366;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffb300;
+}
+
+/* Footer Styles */
 footer {
     background: #003366;
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+    }
+    
+    .service-item {
+        flex: 1;
+    }
 }
