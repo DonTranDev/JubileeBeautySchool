@@ -54,22 +54,22 @@ nav ul li a {
 /* Hero Section */
 .hero {
     background: url('IMG_4932.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: cover; /* Ensures the image covers the entire section */
     color: white;
     text-align: center;
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Ensures the hero section takes up the full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%; /* Ensures the hero section takes up the full width */
+    overflow: hidden; /* Prevents any overflow from the image */
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 51, 102, 0.7);
-    border-radius: 10px;
+@media (max-width: 768px) {
+    .hero {
+        background-size: cover; /* Ensures the image is still covering the hero section on smaller screens */
+    }
 }
 
 /* Button Styles */
