@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.85">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jubilee Beauty School</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <h1>Jubilee Beauty School</h1>
@@ -14,43 +15,60 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#courses">Courses</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-    
-    
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>At Jubilee Beauty School, we provide top-notch beauty education...</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Transform Your Beauty Career</h2>
+            <p>Join our expert-led courses and elevate your skills.</p>
+            <a href="#courses" class="btn-primary">Explore Courses</a>
         </div>
     </section>
-    
-    <section id="services">
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Hair Styling</h3>
-                    <p>Learn the latest hair styling techniques...</p>
+            <h2>About Us</h2>
+            <p>Jubilee Beauty School offers a wide range of beauty courses designed to help you become a professional in the beauty industry. Our experienced instructors provide hands-on training in a supportive and inspiring environment.</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="course">
+                <h3>Basic Cosmetology <span class="dropdown">+</span></h3>
+                <div class="course-info">
+                    <p>Learn the basics of hair, skin, and nail care in our introductory course.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Makeup Artistry</h3>
-                    <p>Master the art of makeup with our experts...</p>
+            </div>
+            <div class="course">
+                <h3>Advanced Makeup Techniques <span class="dropdown">+</span></h3>
+                <div class="course-info">
+                    <p>Master advanced makeup techniques with our expert instructors.</p>
                 </div>
-                <!-- Add more services as needed -->
+            </div>
+            <div class="course">
+                <h3>Nail Art and Design <span class="dropdown">+</span></h3>
+                <div class="course-info">
+                    <p>Get creative with our comprehensive nail art and design course.</p>
+                </div>
             </div>
         </div>
     </section>
-    
-    <section id="contact">
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
+            <form action="mailto: jubileebeautyschool@gmail.com" method="POST" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
@@ -58,13 +76,13 @@
             </form>
         </div>
     </section>
-    
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Jubilee Beauty School. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Jubilee Beauty School. All Rights Reserved.</p>
     </footer>
-    
-    <script src="scripts.js"></script>
+
+    <!-- JavaScript for Dropdowns and Scrolling Effects -->
+    <script src="script.js"></script>
 </body>
 </html>
