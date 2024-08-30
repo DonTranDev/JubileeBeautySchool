@@ -61,20 +61,7 @@ nav ul li a {
     overflow: hidden; /* Hide any overflow */
 }
 
-/* Parallax Effect */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; /* Inherit the background from .hero */
-    background-attachment: fixed; /* Fixed position to create parallax effect */
-    background-size: cover;
-    transform: translateY(-50%);
-    z-index: 1;
-}
+
 
 /* Ensure hero-content is above the image */
 .hero-content {
