@@ -79,15 +79,16 @@ nav ul li a:hover {
 
     header .container {
         padding: 0 10px;
+        flex-direction: column; /* Stack title and navigation vertically */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Line up menu items horizontally */
         padding-top: 10px;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 0 10px; /* Horizontal margin for mobile */
     }
 
     nav ul li a {
@@ -124,7 +125,6 @@ nav ul li a:hover {
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    padding-top: 80px; /* To prevent content from being hidden behind the fixed header */
 }
 
 .hero-content {
@@ -286,5 +286,13 @@ footer {
 footer p {
     margin: 0;
     font-size: 1rem;
+}
+
+/* Mobile-Specific Background Image */
+@media (max-width: 768px) {
+    .hero {
+        background: url('mobile-background.jpg') no-repeat center center;
+        background-size: cover;
+    }
 }
 
