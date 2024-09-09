@@ -9,7 +9,7 @@
 <body>
     <header id="header">
         <div class="logo">
-            <img src="" alt="Jubilee Beauty School Logo">
+            <img src="logo.png" alt="Jubilee Beauty School Logo">
         </div>
         <nav id="navbar">
             <ul>
@@ -17,13 +17,42 @@
                 <li class="dropdown">
                     <a href="#courses">Courses</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#course1">Course 1</a></li>
-                        <li><a href="#course2">Course 2</a></li>
+                        <li class="course-dropdown" id="course1">
+                            <a href="#">Course 1</a>
+                            <div class="dropdown-content">
+                                <p>Description of Course 1.</p>
+                            </div>
+                        </li>
+                        <li class="course-dropdown" id="course2">
+                            <a href="#">Course 2</a>
+                            <div class="dropdown-content">
+                                <p>Description of Course 2.</p>
+                            </div>
+                        </li>
                         <!-- Add more courses as needed -->
                     </ul>
                 </li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services & Prices</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li class="service-dropdown" id="service1">
+                            <a href="#">Service 1</a>
+                            <div class="dropdown-content">
+                                <img src="service1.jpg" alt="Service 1 Image">
+                                <p>Description of Service 1.</p>
+                            </div>
+                        </li>
+                        <li class="service-dropdown" id="service2">
+                            <a href="#">Service 2</a>
+                            <div class="dropdown-content">
+                                <img src="service2.jpg" alt="Service 2 Image">
+                                <p>Description of Service 2.</p>
+                            </div>
+                        </li>
+                        <!-- Add more services as needed -->
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -55,7 +84,15 @@
 
     <section id="services">
         <h2>Services & Prices</h2>
-        <p>Details of services and prices.</p>
+        <div class="service" id="service1">
+            <h3>Service 1</h3>
+            <p>Description of Service 1.</p>
+        </div>
+        <div class="service" id="service2">
+            <h3>Service 2</h3>
+            <p>Description of Service 2.</p>
+        </div>
+        <!-- Add more services as needed -->
     </section>
 
     <footer>
