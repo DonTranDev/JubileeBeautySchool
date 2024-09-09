@@ -9,42 +9,39 @@ document.addEventListener('DOMContentLoaded', function () {
         navbar.classList.toggle('active');
     });
 
-    // Handle dropdown menu hover
+    // Handle dropdown menu hover for courses and services
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
 
         dropdown.addEventListener('mouseover', () => {
-            dropdownMenu.style.display = 'block';
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
+            dropdownMenu.classList.add('show');
         });
 
         dropdown.addEventListener('mouseleave', () => {
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-            setTimeout(() => {
-                if (dropdownMenu.style.opacity === '0') {
-                    dropdownMenu.style.display = 'none';
-                }
-            }, 300); // Matches the transition duration
+            dropdownMenu.classList.remove('show');
         });
 
-        dropdownMenu.addEventListener('mouseover', () => {
-            dropdownMenu.style.display = 'block';
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
-        });
+        // Ensure dropdown content stays visible while hovering over the content
+        const dropdownContents = dropdown.querySelectorAll('.dropdown-content');
 
-        dropdownMenu.addEventListener('mouseleave', () => {
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-            setTimeout(() => {
-                if (dropdownMenu.style.opacity === '0') {
-                    dropdownMenu.style.display = 'none';
-                }
-            }, 300); // Matches the transition duration
+        dropdownContents.forEach(content => {
+            content.addEventListener('mouseover', () => {
+                dropdownMenu.classList.add('show');
+            });
+
+            content.addEventListener('mouseleave', () => {
+                dropdownMenu.classList.remove('show');
+            });
         });
+    });
+
+    // Optional: close the dropdowns when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!navbar.contains(event.target)) {
+            const openMenus = document.querySelectorAll('.dropdown-menu.show');
+            openMenus.forEach(menu => menu.classList.remove('show'));
+        }
     });
 });
