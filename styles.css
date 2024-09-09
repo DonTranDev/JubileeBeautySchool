@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 80px; /* Adds padding equivalent to the header height */
     box-sizing: border-box;
     overflow-x: hidden;
     color: #003366;
@@ -20,6 +20,7 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Set a fixed height for the header */
 }
 
 header .container {
@@ -79,17 +80,17 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     background: url('IMG_4932.jpg') no-repeat center center;
-    background-size: cover; /* Ensures the image covers the entire section */
+    background-size: cover;
     color: white;
     text-align: center;
     position: relative;
-    height: 100vh; /* Ensures the hero section takes up the full viewport height */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Ensures the hero section takes up the full width */
-    overflow: hidden; /* Prevents any overflow from the image */
-    padding-top: 80px; /* To prevent content from being hidden behind the fixed header */
+    width: 100%;
+    overflow: hidden;
+    padding-top: 80px; /* Prevent content from being hidden behind the fixed header */
 }
 
 .hero-content {
@@ -110,8 +111,8 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .hero {
-        height: auto; /* Allows the hero section to adjust height based on content */
-        padding: 100px 20px 20px; /* Adjusted padding to accommodate fixed header */
+        height: auto;
+        padding: 100px 20px 20px;
     }
 
     .hero h1 {
@@ -299,19 +300,16 @@ footer p {
         padding: 0 20px;
     }
 
-    /* Adjust section padding for smaller screens */
     section {
         padding: 40px 10px;
     }
 
-    /* Adjust font sizes for smaller screens */
     h1, h2, h3, p {
         font-size: 1em;
     }
 
-    /* Adjust hero section height and padding */
     .hero {
-        padding: 100px 20px 20px; /* Top padding increased to prevent overlap with fixed header */
+        padding: 100px 20px 20px;
     }
 
     .hero h1 {
@@ -330,7 +328,6 @@ footer p {
         font-size: 1.2rem;
     }
 
-    /* Adjust footer font size */
     footer p {
         font-size: 0.9rem;
     }
