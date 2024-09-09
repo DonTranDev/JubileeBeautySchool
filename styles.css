@@ -13,6 +13,7 @@ body {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -29,6 +30,7 @@ header {
     height: 80px; /* Set a fixed height for the header */
 }
 
+/* Ensure symmetrical padding for the container */
 header .container {
     display: flex;
     justify-content: space-between;
@@ -36,11 +38,8 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 /* Navigation Styles */
@@ -71,9 +70,9 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 0 15px; /* Add some padding to prevent elements from touching the edge */
+        padding: 0 15px; /* Add symmetrical padding on mobile */
     }
-   
+
     body {
         padding-top: 60px; /* Adjust body padding for mobile */
     }
@@ -90,19 +89,6 @@ nav ul li a:hover {
     header .container {
         padding: 0 10px;
         flex-direction: column; /* Stack title and navigation vertically */
-    }
-
-    nav ul {
-        flex-direction: row; /* Line up menu items horizontally */
-        padding-top: 10px;
-    }
-
-    nav ul li {
-        margin: 0 10px; /* Horizontal margin for mobile */
-    }
-
-    nav ul li a {
-        font-size: 0.9em; /* Smaller font size for mobile navigation */
     }
 }
 
@@ -135,22 +121,13 @@ nav ul li a:hover {
     justify-content: center;
     width: 100%;
     overflow: hidden;
+    padding: 0 20px; /* Ensure padding on both sides for mobile */
 }
 
 .hero-content {
     max-width: 800px;
     padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 /* Button Styles */
@@ -303,10 +280,11 @@ footer p {
     .hero {
         background: url('mobile-background.jpg') no-repeat center center;
         background-size: cover;
+        padding: 0 15px; /* Symmetrical padding on both sides */
     }
 
     .hero h1 {
-        font-size: 2.5rem; /* Slightly smaller on mobile */
+        font-size: 2.5rem;
     }
 
     .hero p {
