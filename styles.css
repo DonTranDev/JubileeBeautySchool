@@ -19,6 +19,7 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 .navbar {
   display: flex;
@@ -41,24 +42,20 @@ header {
   color: #D4AF37; /* Gold */
 }
 
-/* Banner */
+/* Parallax Banner */
 .banner {
   height: 100vh;
-  background: url('banner1.jpg') center/cover no-repeat;
+  background: url('banner1.jpg') center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
   color: white;
-  animation: banner-animation 10s infinite;
-}
-.banner-content {
-  max-width: 600px;
 }
 .banner h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
+  animation: fade-in 1s ease-in;
 }
 .cta {
   padding: 10px 20px;
@@ -77,6 +74,7 @@ header {
 .accordion-item {
   margin-bottom: 10px;
   border: 1px solid #D4AF37;
+  overflow: hidden;
 }
 .accordion-button {
   width: 100%;
@@ -87,16 +85,52 @@ header {
   font-size: 1.2rem;
   cursor: pointer;
   border: none;
+  transition: background 0.3s ease;
+}
+.accordion-button:hover {
+  background-color: #EBD28B;
 }
 .accordion-content {
   background-color: #1E2A39;
   color: white;
   padding: 1rem;
   display: none;
-  animation: slide-down 0.5s ease forwards;
+  animation: slide-down 0.5s ease;
+  transition: max-height 0.3s ease;
 }
-.accordion-button:focus + .accordion-content {
-  display: block;
+
+/* About Us */
+#about {
+  padding: 2rem;
+  background-color: #223046;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Contact Us */
+#contact {
+  padding: 2rem;
+  background-color: #FFFFFF;
+  color: #1E2A39;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #D4AF37;
+}
+button {
+  background-color: #D4AF37;
+  color: #1E2A39;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: #EBD28B;
 }
 
 /* Footer */
@@ -108,13 +142,12 @@ footer {
 }
 
 /* Keyframes */
-@keyframes banner-animation {
-  0% { background-image: url('IMG_4932.jpg'); }
-  50% { background-image: url('banner2.jpg'); }
-  100% { background-image: url('banner1.jpg'); }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slide-down {
-  from { height: 0; opacity: 0; }
-  to { height: auto; opacity: 1; }
+  from { max-height: 0; }
+  to { max-height: 300px; }
 }
