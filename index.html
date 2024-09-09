@@ -1,104 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jubilee Beauty School</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jubilee Beauty School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header">
-        <div class="logo">
-            <img src="logo.png" alt="Jubilee Beauty School Logo">
-        </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li class="dropdown">
-                    <a href="#courses">Courses</a>
-                    <ul class="dropdown-menu">
-                        <li class="course-dropdown" id="course1">
-                            <a href="#">Course 1</a>
-                            <div class="dropdown-content">
-                                <p>Description of Course 1.</p>
-                            </div>
-                        </li>
-                        <li class="course-dropdown" id="course2">
-                            <a href="#">Course 2</a>
-                            <div class="dropdown-content">
-                                <p>Description of Course 2.</p>
-                            </div>
-                        </li>
-                        <!-- Add more courses as needed -->
-                    </ul>
-                </li>
-                <li><a href="#about">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#services">Services</a>
-                    <ul class="dropdown-menu">
-                        <li class="service-dropdown" id="service1">
-                            <a href="#">Service 1</a>
-                            <div class="dropdown-content">
-                                <img src="service1.jpg" alt="Service 1 Image">
-                                <p>Description of Service 1.</p>
-                            </div>
-                        </li>
-                        <li class="service-dropdown" id="service2">
-                            <a href="#">Service 2</a>
-                            <div class="dropdown-content">
-                                <img src="service2.jpg" alt="Service 2 Image">
-                                <p>Description of Service 2.</p>
-                            </div>
-                        </li>
-                        <!-- Add more services as needed -->
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Jubilee Beauty School</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="home" class="parallax">
-        <div class="content">
-            <h1>Welcome to Jubilee Beauty School</h1>
-            <p>Your journey to beauty excellence starts here.</p>
-        </div>
-    </section>
+  <!-- Banner -->
+  <section class="banner" id="home">
+    <div class="banner-content">
+      <h1>Where Beauty Meets Expertise</h1>
+      <p>Join our cutting-edge beauty programs.</p>
+      <button class="cta">Learn More</button>
+    </div>
+  </section>
 
-    <section id="courses">
-        <h2>Our Courses</h2>
-        <div class="course" id="course1">
-            <h3>Course 1</h3>
-            <p>Description of Course 1.</p>
+  <!-- Programs Section -->
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-button">Cosmetology</button>
+        <div class="accordion-content">
+          <p>Learn advanced techniques in hair, skin, and nails.</p>
         </div>
-        <div class="course" id="course2">
-            <h3>Course 2</h3>
-            <p>Description of Course 2.</p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button">Esthetics</button>
+        <div class="accordion-content">
+          <p>Master the art of skincare and beauty therapy.</p>
         </div>
-        <!-- Add more courses as needed -->
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Information about the beauty school.</p>
-    </section>
-
-    <section id="services">
-        <h2>Services & Prices</h2>
-        <div class="service" id="service1">
-            <h3>Service 1</h3>
-            <p>Description of Service 1.</p>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-button">Nail Technology</button>
+        <div class="accordion-content">
+          <p>Get creative with cutting-edge nail designs and techniques.</p>
         </div>
-        <div class="service" id="service2">
-            <h3>Service 2</h3>
-            <p>Description of Service 2.</p>
-        </div>
-        <!-- Add more services as needed -->
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Jubilee Beauty School. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Jubilee Beauty School. All rights reserved.</p>
+  </footer>
 
-    <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
