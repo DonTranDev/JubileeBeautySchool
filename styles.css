@@ -2,11 +2,12 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding-top: 80px; /* Adds padding equivalent to the header height */
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     color: #003366;
     background-color: #f0f8ff;
+    padding-top: 80px; /* Adds padding equivalent to the header height */
 }
 
 /* Header Styles */
@@ -79,7 +80,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('DECAL.png') no-repeat center center;
+    background: url('IMG_4932.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
@@ -90,7 +91,7 @@ nav ul li a:hover {
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    padding-top: 80px; /* Prevent content from being hidden behind the fixed header */
+    padding-top: 80px; /* To prevent content from being hidden behind the fixed header */
 }
 
 .hero-content {
@@ -109,10 +110,25 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    /* Adjust padding top based on header height */
+    body {
+        padding-top: 100px; /* Adjust the padding to ensure the body content is not hidden under the header */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     .hero {
         height: auto;
-        padding: 100px 20px 20px;
+        padding: 100px 20px 20px; /* Top padding increased to prevent overlap with fixed header */
     }
 
     .hero h1 {
@@ -121,6 +137,18 @@ nav ul li a:hover {
 
     .hero p {
         font-size: 1.2rem;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }
 
@@ -269,66 +297,3 @@ footer p {
     font-size: 1rem;
 }
 
-/* Parallax Scrolling */
-.hero, .about, .courses, .contact {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero, .about, .courses, .contact {
-        background-attachment: scroll;
-    }
-
-    .hero-content {
-        width: 90%;
-    }
-
-    .contact form {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    section {
-        padding: 40px 10px;
-    }
-
-    h1, h2, h3, p {
-        font-size: 1em;
-    }
-
-    .hero {
-        padding: 100px 20px 20px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .about h2, .courses h2, .contact h2 {
-        font-size: 2rem;
-    }
-
-    .course h3 {
-        font-size: 1.2rem;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-}
