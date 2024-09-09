@@ -109,7 +109,7 @@ footer {
 
 /* Keyframes */
 @keyframes banner-animation {
-  0% { background-image: url('banner1.jpg'); }
+  0% { background-image: url('IMG_4932.jpg'); }
   50% { background-image: url('banner2.jpg'); }
   100% { background-image: url('banner1.jpg'); }
 }
