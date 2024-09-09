@@ -45,7 +45,7 @@ header {
 /* Parallax Banner */
 .banner {
   height: 100vh;
-  background: url('banner1.jpg') center/cover no-repeat fixed;
+  background: url('IMG_4932.jpg') center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
