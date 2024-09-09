@@ -294,5 +294,12 @@ footer p {
         background: url('mobile-background.jpg') no-repeat center center;
         background-size: cover;
     }
-}
 
+    .hero h1 {
+        font-size: 2.5rem; /* Slightly smaller on mobile */
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
