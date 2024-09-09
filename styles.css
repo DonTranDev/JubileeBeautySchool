@@ -1,189 +1,48 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base styling */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Header styling */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #002147; /* Navy Blue */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
-    z-index: 1000;
 }
 
-.logo img {
-    height: 50px;
-    padding: 10px;
+header h1 {
+    font-weight: 600;
 }
 
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section {
+    padding: 50px 0;
 }
 
-#navbar ul {
-    list-style-type: none;
-    display: flex;
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-#navbar li {
-    position: relative;
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Navbar links */
-#navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-#navbar a:hover {
-    background-color: #003366; /* Darker Navy Blue */
-}
-
-/* Dropdown Menu Styling */
+/* Dropdown animations */
 .dropdown-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #003366; /* Darker Navy Blue */
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown-menu.show {
     display: block;
     opacity: 1;
-    visibility: visible;
-}
-
-.dropdown-menu img {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-    margin-right: 15px;
-    vertical-align: middle;
-}
-
-.dropdown-menu p {
-    display: inline;
-}
-
-/* Course Dropdown */
-.course-dropdown:hover .dropdown-content,
-.service-dropdown:hover .dropdown-content {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.dropdown-content {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background: #f9f9f9; /* Light Background */
-    padding: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    width: 300px;
-    max-width: 100%;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    z-index: 2000;
-}
-
-.dropdown-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.dropdown-content p {
-    margin: 0;
-}
-
-/* Parallax Scrolling */
-.parallax {
-    background-image: url('parallax-bg.jpg'); /* Add your background image here */
-    height: 600px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.parallax .content {
-    padding: 20px;
-}
-
-/* Sections Styling */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-h2 {
-    color: #002147; /* Navy Blue */
-}
-
-footer {
-    background: #002147; /* Navy Blue */
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    #navbar ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    #navbar.active ul {
-        display: flex;
-    }
-
-    .dropdown-menu {
-        position: static;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .dropdown-menu.show {
-        display: block;
-    }
-
-    .dropdown-content {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        position: relative;
-        box-shadow: none;
-    }
 }
