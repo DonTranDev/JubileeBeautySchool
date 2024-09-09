@@ -1,11 +1,15 @@
-// Accordion Functionalities
+// Accordion Functionality
 const accordionButtons = document.querySelectorAll('.accordion-button');
 
 accordionButtons.forEach(button => {
   button.addEventListener('click', () => {
     const content = button.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    button.classList.toggle('active');
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      document.querySelectorAll('.accordion-content').forEach(item => item.style.display = 'none');
+      content.style.display = 'block';
+    }
   });
 });
 
@@ -19,4 +23,13 @@ function switchBanner() {
   bannerElement.style.backgroundImage = `url(${banners[bannerIndex]})`;
 }
 
-setInterval(switchBanner, 3000);  // Faster switch interval
+setInterval(switchHere's the remaining portion of the **JavaScript** code for smoother, mobile-compatible animations and responsive design:
+
+```javascript
+setInterval(switchBanner, 3000);  // Faster switch for smoother animation
+
+// Smooth scrolling for parallax effect
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  document.querySelector('.banner').style.backgroundPositionY = `${scrollPos * 0.5}px`;  // Parallax effect
+});
