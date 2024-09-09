@@ -5,6 +5,7 @@ accordionButtons.forEach(button => {
   button.addEventListener('click', () => {
     const content = button.nextElementSibling;
     content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    button.classList.toggle('active');
   });
 });
 
@@ -18,4 +19,4 @@ function switchBanner() {
   bannerElement.style.backgroundImage = `url(${banners[bannerIndex]})`;
 }
 
-setInterval(switchBanner, 5000);
+setInterval(switchBanner, 3000);  // Faster switch interval
