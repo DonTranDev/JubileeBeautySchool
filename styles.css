@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     color: #003366;
+    background-color: #f0f8ff;
 }
 
 /* Header Styles */
@@ -32,8 +33,10 @@ header .container {
 
 header h1 {
     margin: 0;
+    font-size: 1.8em;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -73,7 +76,6 @@ nav ul li a:hover {
     background-color: #ffb300;
 }
 
-
 /* Hero Section */
 .hero {
     background: url('IMG_4932.jpg') no-repeat center center;
@@ -87,11 +89,37 @@ nav ul li a:hover {
     justify-content: center;
     width: 100%; /* Ensures the hero section takes up the full width */
     overflow: hidden; /* Prevents any overflow from the image */
+    padding-top: 80px; /* To prevent content from being hidden behind the fixed header */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
     .hero {
-        background-size: cover; /* Ensures the image is still covering the hero section on smaller screens */
+        height: auto; /* Allows the hero section to adjust height based on content */
+        padding: 100px 20px 20px; /* Adjusted padding to accommodate fixed header */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
     }
 }
 
@@ -130,6 +158,17 @@ section {
     text-align: center;
 }
 
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
 /* Courses Section */
 .courses {
     background: #FFD700;
@@ -138,6 +177,8 @@ section {
 
 .courses h2 {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .course {
@@ -151,6 +192,7 @@ section {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .course-info {
@@ -176,6 +218,11 @@ section {
     text-align: center;
 }
 
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
 .contact form {
     display: flex;
     flex-direction: column;
@@ -189,6 +236,7 @@ section {
     border: none;
     border-radius: 5px;
     width: 100%;
+    font-size: 1rem;
 }
 
 .contact button {
@@ -200,6 +248,7 @@ section {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
 .contact button:hover {
@@ -214,6 +263,11 @@ footer {
     padding: 20px 0;
 }
 
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 /* Parallax Scrolling */
 .hero, .about, .courses, .contact {
     background-attachment: fixed;
@@ -222,7 +276,6 @@ footer {
     background-size: cover;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -244,5 +297,41 @@ footer {
     .contact form {
         width: 100%;
         padding: 0 20px;
+    }
+
+    /* Adjust section padding for smaller screens */
+    section {
+        padding: 40px 10px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    h1, h2, h3, p {
+        font-size: 1em;
+    }
+
+    /* Adjust hero section height and padding */
+    .hero {
+        padding: 100px 20px 20px; /* Top padding increased to prevent overlap with fixed header */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h2, .courses h2, .contact h2 {
+        font-size: 2rem;
+    }
+
+    .course h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust footer font size */
+    footer p {
+        font-size: 0.9rem;
     }
 }
