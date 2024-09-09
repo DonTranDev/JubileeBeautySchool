@@ -33,3 +33,14 @@ window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY;
   document.querySelector('.banner').style.backgroundPositionY = `${scrollPos * 0.5}px`;  // Parallax effect
 });
+
+function sendMail() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const subject = `Contact from ${name}`;
+  const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+  window.location.href = `mailto:info@jubileebeautyschool.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
