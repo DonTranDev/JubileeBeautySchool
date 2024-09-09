@@ -23,10 +23,7 @@ function switchBanner() {
   bannerElement.style.backgroundImage = `url(${banners[bannerIndex]})`;
 }
 
-setInterval(switchHere's the remaining portion of the **JavaScript** code for smoother, mobile-compatible animations and responsive design:
-
-```javascript
-setInterval(switchBanner, 3000);  // Faster switch for smoother animation
+setInterval(switchBanner, 3000);  // Switch every 3 seconds for smoother transition
 
 // Smooth scrolling for parallax effect
 window.addEventListener('scroll', () => {
@@ -34,13 +31,16 @@ window.addEventListener('scroll', () => {
   document.querySelector('.banner').style.backgroundPositionY = `${scrollPos * 0.5}px`;  // Parallax effect
 });
 
+// Email Submission - Open user's default email app
 function sendMail() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
+  // Subject and body content for the email
   const subject = `Contact from ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
+  // Construct the mailto link and redirect the user
   window.location.href = `mailto:info@jubileebeautyschool.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
