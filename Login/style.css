@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 80px; /* Matches the header height */
     box-sizing: border-box;
     overflow-x: hidden;
     color: #003366;
@@ -20,6 +20,7 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Set a fixed height */
 }
 
 header .container {
@@ -128,6 +129,10 @@ nav ul li a:hover {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Reduced padding for smaller screens */
+    }
+
     header .container {
         flex-direction: column;
         text-align: center;
@@ -151,11 +156,5 @@ nav ul li a:hover {
     /* Adjust font sizes */
     h1, h2, h3 {
         font-size: 1.5em;
-    }
-
-    /* Hero Section on mobile */
-    .hero {
-        background-size: cover;
-        height: 70vh;
     }
 }
