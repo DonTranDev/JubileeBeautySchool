@@ -63,28 +63,38 @@ nav ul li a:hover {
 
 /* Mobile Specific Header Styles */
 @media (max-width: 768px) {
-    header .container {
-        padding: 0 15px; /* Symmetrical padding on mobile */
+    .container {
+        width: 100%;
+        padding: 0 15px; /* Add symmetrical padding on mobile */
     }
 
     body {
-        padding-top: 60px; /* Adjust body padding for mobile */
+        padding-top: 70px; /* Increase padding to match the larger header */
     }
 
     header {
-        height: 60px; /* Reduce the height for mobile */
+        height: 70px; /* Increase height for better spacing */
         padding: 10px 0;
     }
 
     header h1 {
-        font-size: 1.5em; /* Smaller font for mobile */
+        font-size: 1.5em; /* Adjust font size if needed */
     }
 
-    header .container {
-        padding: 0 10px;
-        flex-direction: column; /* Stack title and navigation vertically */
+    nav ul {
+        flex-direction: row; /* Line up menu items horizontally */
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Horizontal margin for mobile */
+    }
+
+    nav ul li a {
+        font-size: 0.9em; /* Ensure font size fits well */
     }
 }
+
 
 /* Sign In / Sign Up Button Styles */
 .btn-secondary {
