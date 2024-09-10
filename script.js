@@ -13,22 +13,23 @@ accordionButtons.forEach(button => {
   });
 });
 
-// Banner Animation
+// Switching Banner Animation
 let bannerIndex = 0;
 const banners = ['CollagesBanner.png', 'banner2.jpg', 'banner3.jpg'];
-const bannerElement = document.querySelector('.banner');
+const switchingBanner = document.querySelector('.switching-banner');
 
 function switchBanner() {
   bannerIndex = (bannerIndex + 1) % banners.length;
-  bannerElement.style.backgroundImage = `url(${banners[bannerIndex]})`;
+  switchingBanner.style.backgroundImage = `url(${banners[bannerIndex]})`;
+  switchingBanner.style.transition = 'background-image 1s ease-in-out';  // Smooth transition
 }
 
-setInterval(switchBanner, 3000);  // Switch every 3 seconds for smoother transition
+setInterval(switchBanner, 3000);  // Switch every 3 seconds
 
-// Smooth scrolling for parallax effect
+// Parallax Effect for the Parallax Banner
 window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY;
-  document.querySelector('.banner').style.backgroundPositionY = `${scrollPos * 0.5}px`;  // Parallax effect
+  document.querySelector('.parallax-banner').style.backgroundPositionY = `${scrollPos * 0.5}px`;  // Parallax effect
 });
 
 // Email Submission - Open user's default email app
