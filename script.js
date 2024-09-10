@@ -15,7 +15,7 @@ accordionButtons.forEach(button => {
 
 // Banner Animation
 let bannerIndex = 0;
-const banners = ['CollageBanner.png', 'banner2.jpg', 'banner3.jpg'];
+const banners = ['CollagesBanner.png', 'banner2.jpg', 'banner3.jpg'];
 const bannerElement = document.querySelector('.banner');
 
 function switchBanner() {
