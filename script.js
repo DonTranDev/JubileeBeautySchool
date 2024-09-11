@@ -42,3 +42,7 @@ function sendMail() {
 
   window.location.href = `mailto:info@jubileebeautyschool.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
