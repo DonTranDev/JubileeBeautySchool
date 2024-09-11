@@ -3,9 +3,10 @@ const accordionButtons = document.querySelectorAll('.accordion-button');
 
 accordionButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Get the associated content by finding the element with a specific class
-    const content = button.nextElementSibling;
-
+    // Find the parent .accordion-item and then the .accordion-content within it
+    const accordionItem = button.closest('.accordion-item');
+    const content = accordionItem.querySelector('.accordion-content');
+    
     // Check if the content is currently open
     if (content.style.maxHeight) {
       // If open, close it
@@ -15,12 +16,13 @@ accordionButtons.forEach(button => {
       document.querySelectorAll('.accordion-content').forEach(item => {
         item.style.maxHeight = null;
       });
-
+      
       // Open the clicked accordion
       content.style.maxHeight = content.scrollHeight + 'px';
     }
   });
 });
+
 
 // Banner Image Switch (Switching Banner)
 let bannerIndex = 0;
