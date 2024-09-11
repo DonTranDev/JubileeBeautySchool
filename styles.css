@@ -68,6 +68,16 @@ header {
   z-index: 2; /* Ensure text is above images */
 }
 
+.banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  padding: 20px;
+}
+.banner-text p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
 .switching-banner img {
   position: absolute;
   width: 100%;
