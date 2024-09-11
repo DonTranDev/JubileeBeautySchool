@@ -119,6 +119,7 @@ section {
   background-color: #1E2A39;
   color: white;
   padding: 1rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* About Us */
