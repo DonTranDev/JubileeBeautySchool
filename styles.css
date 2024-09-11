@@ -118,7 +118,7 @@ section {
   transition: max-height 0.3s ease-out;
   background-color: #1E2A39;
   color: white;
-  padding: 1rem;
+  padding: 0 1rem;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
