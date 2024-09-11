@@ -48,16 +48,41 @@ header {
 /* Switching Banner */
 .switching-banner {
   height: 70vh;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  position: relative; /* Required for absolute positioning of slides */
+  overflow: hidden; /* Hide any overflow */
 }
-.switching-banner h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+
+.switching-banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+}
+
+.banner-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+}
+
+.switching-banner .banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Parallax Banner */
