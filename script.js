@@ -26,7 +26,7 @@ accordionButtons.forEach(button => {
 
 // Banner Image Switch (Switching Banner)
 let bannerIndex = 0;
-const banners = ['CollagesBanner.png', 'banner2.jpg', 'banner3.jpg'];
+const banners = ['Collage', 'HollyTran.png', 'banner3.jpg'];
 const switchingBanner = document.querySelector('.switching-banner');
 
 // Create image elements and append to the banner
