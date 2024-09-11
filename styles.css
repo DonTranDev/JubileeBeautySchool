@@ -113,7 +113,7 @@ header {
 /* Parallax Banner */
 .parallax-banner {
   height: 100vh;
-  background: url('Background2.png') center/cover no-repeat fixed;
+  background: url('Background3.png') center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
