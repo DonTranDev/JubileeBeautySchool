@@ -3,11 +3,20 @@ const accordionButtons = document.querySelectorAll('.accordion-button');
 
 accordionButtons.forEach(button => {
   button.addEventListener('click', () => {
+    // Get the associated content by finding the element with a specific class
     const content = button.nextElementSibling;
+
+    // Check if the content is currently open
     if (content.style.maxHeight) {
+      // If open, close it
       content.style.maxHeight = null;
     } else {
-      document.querySelectorAll('.accordion-content').forEach(item => item.style.maxHeight = null);
+      // Close all other open accordions
+      document.querySelectorAll('.accordion-content').forEach(item => {
+        item.style.maxHeight = null;
+      });
+
+      // Open the clicked accordion
       content.style.maxHeight = content.scrollHeight + 'px';
     }
   });
