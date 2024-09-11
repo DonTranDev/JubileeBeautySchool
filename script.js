@@ -26,14 +26,28 @@ accordionButtons.forEach(button => {
 
 // Banner Image Switch (Switching Banner)
 let bannerIndex = 0;
-const banners = ['Collage.png', 'HollyTran.png', 'banner3.jpg'];
+const banners = ['CollagesBanner.png', 'banner2.jpg', 'banner3.jpg'];
 const switchingBanner = document.querySelector('.switching-banner');
 
-function switchBanner() {
-  bannerIndex = (bannerIndex + 1) % banners.length;
-  switchingBanner.style.backgroundImage = `url(${banners[bannerIndex]})`;
+// Create image elements and append to the banner
+function createSlides() {
+  banners.forEach((banner, index) => {
+    const img = document.createElement('img');
+    img.src = banner;
+    img.classList.add('banner-slide');
+    img.style.opacity = index === 0 ? '1' : '0'; // Show the first image
+    switchingBanner.appendChild(img);
+  });
 }
 
+function switchBanner() {
+  const slides = document.querySelectorAll('.banner-slide');
+  slides[bannerIndex].style.opacity = '0'; // Hide current slide
+  bannerIndex = (bannerIndex + 1) % slides.length;
+  slides[bannerIndex].style.opacity = '1'; // Show next slide
+}
+
+createSlides();
 setInterval(switchBanner, 3000);
 
 // Parallax Scroll Effect (for Parallax Banner)
