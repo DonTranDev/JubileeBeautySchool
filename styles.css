@@ -275,13 +275,15 @@ header {
   padding: 1rem 2rem;
   font-size: 1rem;
   border-top: 1px solid #D4AF37;
-  max-height: 0;
+  max-height: 0; /* Ensures content is hidden when not active */
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
 .accordion-item.active .accordion-content {
   max-height: 300px; /* Adjust based on content */
+  overflow: auto; /* Allows scrolling if content exceeds max-height */
 }
+
 
 /* Footer */
 footer {
