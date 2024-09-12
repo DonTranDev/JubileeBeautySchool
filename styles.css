@@ -150,10 +150,12 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   padding: 20px;
+  text-align: center;
 }
 .hero p {
   font-size: 1.5rem;
   margin-top: 10px;
+  text-align: center;
 }
 .hero .cta {
   padding: 15px 30px;
@@ -194,10 +196,12 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   padding: 20px;
+  text-align: center;
 }
 .banner-text p {
   margin-top: 10px;
   font-size: 1.5rem;
+  text-align: center;
 }
 .switching-banner img {
   position: absolute;
@@ -222,10 +226,12 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   padding: 20px;
+  text-align: center;
 }
 .banner-content p {
   margin-top: 10px;
   font-size: 1.5rem;
+  text-align: center;
 }
 .cta {
   padding: 15px 30px;
@@ -258,7 +264,7 @@ header {
   background-color: #D4AF37;
   color: #FFFFFF;
   padding: 1rem;
-  text-align: left;
+  text-align: center; /* Center align the text */
   border: none;
   outline: none;
   cursor: pointer;
@@ -280,10 +286,9 @@ header {
   transition: max-height 0.5s ease-in-out;
 }
 .accordion-item.active .accordion-content {
-  max-height: 300px; /* Adjust based on content */
+  max-height: 500px; /* Adjust based on content */
   overflow: auto; /* Allows scrolling if content exceeds max-height */
 }
-
 
 /* Footer */
 footer {
@@ -309,6 +314,42 @@ footer {
     padding: 1rem;
   }
   
+  /* Show menu toggle for mobile */
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  /* Hide nav links initially on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Show nav links when menu is open */
+  .nav-links.active {
+    display: flex;
+  }
+  
+  /* Dropdown behavior on mobile */
+  .nav-links li {
+    margin-left: 0;
+  }
+  .nav-links li .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+  .nav-links li.active .dropdown {
+    display: block;
+  }
+
   /* Adjust text sizes for banners */
   .banner-text h1, .banner-content h1 {
     font-size: 2rem;
