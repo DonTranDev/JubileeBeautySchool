@@ -32,9 +32,11 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
+  position: relative;
 }
 .nav-links li {
   margin-left: 20px;
+  position: relative;
 }
 .nav-links a {
   text-decoration: none;
@@ -43,6 +45,90 @@ header {
 }
 .nav-links a:hover {
   color: #D4AF37;
+}
+
+/* Dropdown Menus */
+.nav-links li .dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nav-links li:hover .dropdown,
+.nav-links li.active .dropdown {
+  display: block;
+}
+.dropdown a {
+  color: #1E2A39;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  background-color: #D4AF37;
+  color: white;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 100%;
+  height: 3px;
+  background-color: #1E2A39;
+}
+@media screen and (max-width: 768px) {
+  /* Navbar for Mobile */
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  /* Show menu toggle for mobile */
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  /* Hide nav links initially on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Show nav links when menu is open */
+  .nav-links.active {
+    display: flex;
+  }
+  
+  /* Dropdown behavior on mobile */
+  .nav-links li {
+    margin-left: 0;
+  }
+  .nav-links li .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+  .nav-links li.active .dropdown {
+    display: block;
+  }
 }
 
 /* Hero Section */
@@ -112,7 +198,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   transition: opacity 1s ease-in-out;
   z-index: 1;
 }
@@ -209,13 +295,6 @@ footer {
     flex-direction: column;
     padding: 1rem;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-links li {
-    margin-left: 0;
-  }
   
   /* Adjust text sizes for banners */
   .banner-text h1, .banner-content h1 {
@@ -267,92 +346,5 @@ footer {
   /* Further shrink text and buttons */
   
   /* Banner adjustments */
-  .banner-text h1, .banner-content h1 {
-    font-size: 1.5rem;
-  }
-  .banner-text p, .banner-content p {
-    font-size: 1rem;
-  }
-  .cta {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-
-  /* Adjust banner and parallax images to fit mobile screen width */
-  .switching-banner img, 
-  .parallax-banner {
-    height: auto;
-    background-size: contain;
-    object-fit: contain;
-  }
-
-  /* Accordion */
-  .accordion-button {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
-  .accordion-content {
-    font-size: 0.8rem;
-  }
-
-  /* Reduce padding in sections */
-  section {
-    padding: 1.5rem 1rem;
-  }
-
-  /* Form fields */
-  form input, form textarea {
-    font-size: 0.8rem;
-  }
-  button {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-  
-  /* Footer text */
-  footer {
-    font-size: 0.8rem;
-  }
-}
-
-/* Horizontal mobile screens (landscape mode) */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .banner-text h1, .banner-content h1 {
-    font-size: 2rem;
-  }
-  .banner-text p, .banner-content p {
-    font-size: 1rem;
-  }
-
-  /* Adjust banner and parallax images for landscape mobile screens */
-  .switching-banner img, 
-  .parallax-banner {
-    height: auto;
-    background-size: contain;
-    object-fit: contain;
-  }
-
-  /* Adjust accordion padding */
-  .accordion-button {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-  .accordion-content {
-    padding: 0.8rem 1rem;
-  }
-
-  /* Form field adjustments */
-  form input, form textarea {
-    font-size: 1rem;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-}
+  .banner-text h1, .banner-content h
 
