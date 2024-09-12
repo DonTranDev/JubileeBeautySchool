@@ -45,29 +45,60 @@ header {
   color: #D4AF37;
 }
 
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('Background1.jpg') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  padding: 20px;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.hero .cta {
+  padding: 15px 30px;
+  background-color: #D4AF37;
+  color: #1E2A39;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+.hero .cta:hover {
+  background-color: #EBD28B;
+}
+
 /* Switching Banner */
 .switching-banner {
   height: 70vh;
-  background-size: cover; /* Ensure the image covers the entire area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  position: relative; /* Required for absolute positioning of slides */
-  overflow: hidden; /* Hide any overflow */
+  position: relative;
+  overflow: hidden;
 }
-
 .banner-text {
-  position: absolute; /* Keep text above images */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 2; /* Ensure text is above images */
+  z-index: 2;
 }
-
 .banner-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
@@ -77,26 +108,13 @@ header {
   margin-top: 10px;
   font-size: 1.5rem;
 }
-
 .switching-banner img {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the entire container */
+  object-fit: cover; 
   transition: opacity 1s ease-in-out;
-  z-index: 1; /* Place image below text */
-}
-
-.banner-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1s ease-in-out; /* Smooth transition for image */
+  z-index: 1;
 }
 
 /* Parallax Banner */
@@ -133,78 +151,51 @@ header {
 }
 
 /* Accordion Section */
-section {
-  padding: 3rem 2rem;
+.accordion {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 .accordion-item {
-  width: 100%;
-  margin-bottom: 20px;
-  border: 1px solid #D4AF37;
+  background-color: #f1f1f1;
+  color: #1E2A39;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .accordion-button {
-  width: 100%;
   background-color: #D4AF37;
-  color: #1E2A39;
+  color: #FFFFFF;
   padding: 1rem;
   text-align: left;
-  font-size: 1.2rem;
-  cursor: pointer;
   border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.accordion-button:hover {
+  background-color: #EBD28B;
 }
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: #1E2A39;
-  color: white;
-  padding: 0 1rem;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-/* About Us */
-#about {
-  padding: 4rem 2rem;
-  background-color: #223046;
-  color: #FFFFFF;
-  text-align: center;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Contact Us */
-#contact {
-  padding: 4rem 2rem;
   background-color: #FFFFFF;
   color: #1E2A39;
-  max-width: 1200px;
-  margin: auto;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-input, textarea {
-  padding: 15px;
-  border: 1px solid #D4AF37;
-}
-button {
-  background-color: #D4AF37;
-  color: #1E2A39;
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
-}
-button:hover {
-  background-color: #EBD28B;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-top: 1px solid #D4AF37;
 }
 
 /* Footer */
 footer {
   background-color: #1E2A39;
+  color: #FFFFFF;
   text-align: center;
-  padding: 1.5rem;
-  color: #D4AF37;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Responsive Design */
@@ -236,6 +227,14 @@ footer {
   .cta {
     padding: 10px 20px;
     font-size: 1rem;
+  }
+
+  /* Adjust banner and parallax images to fit mobile screen width */
+  .switching-banner img, 
+  .parallax-banner {
+    height: auto;
+    background-size: contain;
+    object-fit: contain;
   }
 
   /* Accordion Section */
@@ -277,6 +276,14 @@ footer {
   .cta {
     padding: 8px 15px;
     font-size: 0.9rem;
+  }
+
+  /* Adjust banner and parallax images to fit mobile screen width */
+  .switching-banner img, 
+  .parallax-banner {
+    height: auto;
+    background-size: contain;
+    object-fit: contain;
   }
 
   /* Accordion */
@@ -322,6 +329,14 @@ footer {
     font-size: 1rem;
   }
 
+  /* Adjust banner and parallax images for landscape mobile screens */
+  .switching-banner img, 
+  .parallax-banner {
+    height: auto;
+    background-size: contain;
+    object-fit: contain;
+  }
+
   /* Adjust accordion padding */
   .accordion-button {
     font-size: 1rem;
@@ -340,3 +355,4 @@ footer {
     font-size: 1rem;
   }
 }
+
