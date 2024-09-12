@@ -57,10 +57,15 @@ header {
   left: 0;
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .nav-links li:hover .dropdown,
 .nav-links li.active .dropdown {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 .dropdown a {
   color: #1E2A39;
@@ -270,6 +275,12 @@ header {
   padding: 1rem 2rem;
   font-size: 1rem;
   border-top: 1px solid #D4AF37;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.accordion-item.active .accordion-content {
+  max-height: 300px; /* Adjust based on content */
 }
 
 /* Footer */
@@ -346,5 +357,10 @@ footer {
   /* Further shrink text and buttons */
   
   /* Banner adjustments */
-  .banner-text h1, .banner-content h
-
+  .banner-text h1, .banner-content h1 {
+    font-size: 1.5rem;
+  }
+  .banner-text p, .banner-content p {
+    font-size: 1rem;
+  }
+}
