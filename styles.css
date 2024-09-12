@@ -272,7 +272,7 @@ header {
 .accordion-content {
   background-color: #FFFFFF;
   color: #1E2A39;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   font-size: 1rem;
   border-top: 1px solid #D4AF37;
   max-height: 0; /* Ensures content is hidden when not active */
