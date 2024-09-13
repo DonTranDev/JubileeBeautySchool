@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
   padding-top: 80px; /* Space for the fixed header */
+  margin-bottom: 100px; /* Ensure space for footer */
 }
 
 /* Header */
@@ -314,7 +315,8 @@ section h2 {
 .contact-section {
   padding: 4rem 2rem;
   position: relative;
-  min-height: 50vh; /* Ensures it has enough height */
+  min-height: 50vh; /* Ensure it has enough height */
+  margin-bottom: 100px; /* Ensure space at the bottom for footer */
   box-sizing: border-box;
 }
 .contact-section::after {
