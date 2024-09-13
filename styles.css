@@ -28,6 +28,7 @@ header {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: auto;
+  align-items: center; /* Align items vertically */
 }
 .nav-links {
   display: flex;
@@ -45,6 +46,26 @@ header {
 }
 .nav-links a:hover {
   color: #D4AF37;
+}
+
+/* Sign In Button */
+.sign-in-button {
+  background-color: #D4AF37;
+  color: #1E2A39;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: auto;
+  transition: background-color 0.3s ease;
+}
+.sign-in-button:hover {
+  background-color: #EBD28B;
+}
+.sign-in-button a {
+  color: #1E2A39;
+  text-decoration: none;
 }
 
 /* Dropdown Menus */
@@ -328,7 +349,7 @@ section h2 {
 .our-programs-section {
   padding: 4rem 2rem;
   position: relative;
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  background: transparent; /* Transparent background to show parallax */
 }
 
 /* Contact Section */
@@ -450,4 +471,3 @@ section h2 {
     font-size: 1rem;
   }
 }
-
