@@ -312,33 +312,37 @@ section h2 {
 
 /* About Us Section */
 .about-us-section {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.about-us-section p {
-  text-align: justify;
-  text-indent: 1.5rem; /* Indent the first line of each paragraph */
-}
-
-/* Contact Us Section */
-.contact-section {
-  text-align: center;
   padding: 4rem 2rem;
   position: relative;
   min-height: 50vh; /* Ensures it has enough height */
   box-sizing: border-box;
+  text-align: center;
+}
+.about-us-section p {
+  text-indent: 1em; /* Adjust indentation */
+  margin: 0 auto;
+  max-width: 800px; /* Ensures text does not stretch too wide */
+}
+
+/* Our Programs Section */
+.our-programs-section {
+  padding: 4rem 2rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  position: relative;
+  min-height: 50vh; /* Ensures it has enough height */
+  box-sizing: border-box;
+  text-align: center;
 }
 .contact-section::after {
   content: "";
   display: block;
   height: 1px; /* Invisible element to ensure no cut-off */
-}
-
-/* Our Programs Section */
-.our-programs-section {
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
-  padding: 4rem 2rem;
-  text-align: center;
 }
 
 /* Responsive Design */
@@ -446,3 +450,4 @@ section h2 {
     font-size: 1rem;
   }
 }
+
