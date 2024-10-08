@@ -65,7 +65,7 @@ function sendMail() {
   const subject = `Contact from ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-  window.location.href = `mailto:info@jubileebeautyschool.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:info@jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function scrollToSection(sectionId) {
