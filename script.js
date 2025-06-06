@@ -23,7 +23,6 @@ accordionButtons.forEach(button => {
   });
 });
 
-
 // Banner Image Switch (Switching Banner)
 let bannerIndex = 0;
 const banners = ['Collage1.png', 'HollyVietTran.png'];
