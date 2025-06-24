@@ -1,67 +1,50 @@
-// Accordion Functionality
-document.querySelectorAll('.accordion-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.closest('.accordion-item');
-    const content = item.querySelector('.accordion-content');
-    const isOpen = item.classList.contains('active');
+// === Accordion One-at-a-Time Functionality ===
+const accordionButtons = document.querySelectorAll('.accordion-button');
 
-    document.querySelectorAll('.accordion-item').forEach(i => {
-      i.classList.remove('active');
-      i.querySelector('.accordion-content').style.maxHeight = null;
+accordionButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const currentItem = button.closest('.program-item');
+    const isActive = currentItem.classList.contains('active');
+
+    document.querySelectorAll('.program-item').forEach(item => {
+      item.classList.remove('active');
     });
 
-    if (!isOpen) {
-      item.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + 'px';
+    if (!isActive) {
+      currentItem.classList.add('active');
     }
   });
 });
 
-// Switching Banner Logic
-const banners = ['Collage1.png', 'HollyVietTran.png'];
-let bannerIndex = 0;
-const bannerContainer = document.querySelector('.switching-banner');
-
-banners.forEach((src, i) => {
-  const img = document.createElement('img');
-  img.src = src;
-  img.classList.add('banner-slide');
-  img.style.opacity = i === 0 ? '1' : '0';
-  bannerContainer.appendChild(img);
-});
-
-setInterval(() => {
-  const slides = document.querySelectorAll('.banner-slide');
-  slides[bannerIndex].style.opacity = '0';
-  bannerIndex = (bannerIndex + 1) % slides.length;
-  slides[bannerIndex].style.opacity = '1';
-}, 3000);
-
-// Parallax Effect
-window.addEventListener('scroll', () => {
-  const scroll = window.scrollY;
-  const parallax = document.querySelector('.parallax-banner');
-  parallax.style.backgroundPositionY = `${scroll * 0.5}px`;
-});
-
-// Mobile Menu Toggle
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
-
-// Scroll To Section
+// === Smooth Scroll Helper (optional use for Learn More button) ===
 function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Email Submission
+// === Optional: Banner Slideshow ===
+const bannerImages = ['Collage1.png', 'HollyVietTran.png'];
+let bannerIndex = 0;
+
+function cycleBanner() {
+  const bannerEl = document.querySelector('.hero');
+  if (!bannerEl) return;
+
+  bannerEl.style.backgroundImage = `url('${bannerImages[bannerIndex]}')`;
+  bannerIndex = (bannerIndex + 1) % bannerImages.length;
+}
+
+setInterval(cycleBanner, 5000);
+
+// === Optional: Send Mail ===
 function sendMail() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+  const name = document.getElementById('name')?.value;
+  const email = document.getElementById('email')?.value;
+  const message = document.getElementById('message')?.value;
+
+  if (!name || !email || !message) return;
 
   const subject = `Contact from ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-
   window.location.href = `mailto:jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
