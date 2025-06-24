@@ -47,4 +47,4 @@ function sendMail() {
   const subject = `Contact from ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
   window.location.href = `mailto:jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+} 
