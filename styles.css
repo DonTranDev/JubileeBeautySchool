@@ -118,12 +118,15 @@ a {
   transition: transform 0.3s;
   width: 90%;
   position: relative;
+  margin: 4rem 0;
 }
 .program-item.left {
   align-self: flex-start;
+  margin-left: 5%;
 }
 .program-item.right {
   align-self: flex-end;
+  margin-right: 5%;
 }
 .accordion-button {
   width: 100%;
@@ -146,10 +149,10 @@ a {
   overflow: hidden;
   transition: max-height 0.4s ease;
   margin-top: 1rem;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 .program-item.active .accordion-content {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 /* === ABOUT === */
