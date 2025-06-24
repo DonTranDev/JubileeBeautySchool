@@ -22,18 +22,56 @@ function scrollToSection(id) {
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
-// === Optional: Banner Slideshow ===
+// === Slide Banner Slideshow ===
 const bannerImages = ['Collage1.png', 'HollyVietTran.png'];
 let bannerIndex = 0;
 
-function cycleBanner() {
-  const bannerEl = document.querySelector('.hero');
-  if (!bannerEl) return;
+function createBannerSlider() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
 
-  bannerEl.style.backgroundImage = `url('${bannerImages[bannerIndex]}')`;
-  bannerIndex = (bannerIndex + 1) % bannerImages.length;
+  const slider = document.createElement('div');
+  slider.className = 'banner-slider';
+  slider.style.display = 'flex';
+  slider.style.width = `${bannerImages.length * 100}%`;
+  slider.style.transition = 'transform 1s ease-in-out';
+
+  bannerImages.forEach(src => {
+    const slide = document.createElement('div');
+    slide.style.flex = '1 0 100%';
+    slide.style.backgroundImage = `url('${src}')`;
+    slide.style.backgroundSize = 'cover';
+    slide.style.backgroundPosition = 'center';
+    slide.style.height = '100%';
+    slider.appendChild(slide);
+  });
+
+  const content = hero.querySelector('.hero-content');
+  hero.innerHTML = '';
+  hero.appendChild(slider);
+  hero.appendChild(content);
+
+  content.style.zIndex = '2';
+  content.style.position = 'absolute';
+  content.style.top = '50%';
+  content.style.left = '50%';
+  content.style.transform = 'translate(-50%, -50%)';
+
+  hero.style.overflow = 'hidden';
+  hero.style.position = 'relative';
+  hero.slider = slider;
 }
 
+function cycleBanner() {
+  const hero = document.querySelector('.hero');
+  const slider = hero?.querySelector('.banner-slider');
+  if (!slider) return;
+
+  bannerIndex = (bannerIndex + 1) % bannerImages.length;
+  slider.style.transform = `translateX(-${bannerIndex * 100}%)`;
+}
+
+createBannerSlider();
 setInterval(cycleBanner, 5000);
 
 // === Optional: Send Mail ===
@@ -47,4 +85,19 @@ function sendMail() {
   const subject = `Contact from ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
   window.location.href = `mailto:jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-} 
+}
+
+// === Responsive Program Panel Stagger ===
+function applyStaggeredPrograms() {
+  const programItems = document.querySelectorAll('.program-item');
+  programItems.forEach((item, index) => {
+    item.style.marginLeft = index % 2 === 0 ? '5%' : 'auto';
+    item.style.marginRight = index % 2 !== 0 ? '5%' : 'auto';
+    item.style.width = '90%';
+    item.style.maxWidth = '700px';
+  });
+}
+
+window.addEventListener('load', applyStaggeredPrograms);
+window.addEventListener('resize', applyStaggeredPrograms);
+
