@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset & Globals */
 * {
   margin: 0;
   padding: 0;
@@ -9,31 +9,34 @@ body {
   background-color: #1E2A39;
   color: #FFFFFF;
   scroll-behavior: smooth;
+  padding-top: 80px;
   line-height: 1.6;
-  padding-top: 80px; /* Space for the fixed header */
 }
 
-/* Header */
+/* Header & Navbar */
 header {
-  background-color: #FFFFFF;
   position: fixed;
   top: 0;
   width: 100%;
+  background: #fff;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: auto;
-  align-items: center; /* Align items vertically */
+}
+.logo {
+  font-weight: bold;
+  color: #1E2A39;
 }
 .nav-links {
   display: flex;
   list-style: none;
-  position: relative;
 }
 .nav-links li {
   margin-left: 20px;
@@ -48,189 +51,83 @@ header {
   color: #D4AF37;
 }
 
-/* Sign In Button */
+/* Sign-in Button */
 .sign-in-button {
-  background-color: #D4AF37;
+  background: #D4AF37;
   color: #1E2A39;
-  border: none;
   padding: 10px 20px;
-  font-size: 0.9rem;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
-  margin-left: auto;
-  transition: background-color 0.3s ease;
+}
+.sign-in-button a {
+  text-decoration: none;
+  color: #1E2A39;
 }
 .sign-in-button:hover {
   background-color: #EBD28B;
 }
-.sign-in-button a {
-  color: #1E2A39;
-  text-decoration: none;
-}
 
-/* Dropdown Menus */
+/* Dropdown (optional future expansion) */
 .nav-links li .dropdown {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  background-color: white;
-  list-style: none;
+  background: white;
   top: 100%;
   left: 0;
-  width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(-10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.nav-links li:hover .dropdown,
-.nav-links li.active .dropdown {
-  display: block;
+.nav-links li:hover .dropdown {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
-}
-.dropdown a {
-  color: #1E2A39;
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
-}
-.dropdown a:hover {
-  background-color: #D4AF37;
-  color: white;
 }
 
 /* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 .menu-toggle div {
-  width: 100%;
+  background: #1E2A39;
   height: 3px;
-  background-color: #1E2A39;
-}
-@media screen and (max-width: 768px) {
-  /* Navbar for Mobile */
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  /* Show menu toggle for mobile */
-  .menu-toggle {
-    display: flex;
-    margin-left: auto;
-  }
-  
-  /* Hide nav links initially on mobile */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  /* Show nav links when menu is open */
-  .nav-links.active {
-    display: flex;
-  }
-  
-  /* Dropdown behavior on mobile */
-  .nav-links li {
-    margin-left: 0;
-  }
-  .nav-links li .dropdown {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-  }
-  .nav-links li.active .dropdown {
-    display: block;
-  }
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: url('Background1.jpg') center/cover no-repeat fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  padding: 20px;
-  text-align: center;
-}
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  text-align: center;
-}
-.hero .cta {
-  padding: 15px 30px;
-  background-color: #D4AF37;
-  color: #1E2A39;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-  margin-top: 20px;
-}
-.hero .cta:hover {
-  background-color: #EBD28B;
+  margin: 5px 0;
+  width: 100%;
 }
 
 /* Switching Banner */
 .switching-banner {
   height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-}
-.banner-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  padding: 20px;
-  text-align: center;
-}
-.banner-text p {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  text-align: center;
 }
 .switching-banner img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
+  transition: opacity 1s ease;
+}
+.banner-text {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+}
+.banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+.banner-text p {
+  font-size: 1.5rem;
 }
 
 /* Parallax Banner */
@@ -238,236 +135,106 @@ header {
   height: 100vh;
   background: url('Background3.png') center/cover no-repeat fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  color: white;
 }
 .banner-content h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  padding: 20px;
-  text-align: center;
 }
 .banner-content p {
-  margin-top: 10px;
   font-size: 1.5rem;
-  text-align: center;
 }
 .cta {
-  padding: 15px 30px;
-  background-color: #D4AF37;
+  background: #D4AF37;
   color: #1E2A39;
+  padding: 15px 30px;
   border: none;
-  font-size: 1.2rem;
   cursor: pointer;
-  transition: 0.3s ease;
   margin-top: 20px;
 }
 .cta:hover {
-  background-color: #EBD28B;
+  background: #EBD28B;
 }
 
-/* Accordion Section */
+/* Accordion */
 .accordion {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
 }
 .accordion-item {
-  background-color: #f1f1f1;
+  background: #f1f1f1;
   color: #1E2A39;
   margin-bottom: 10px;
   border-radius: 5px;
-  overflow: hidden;
 }
 .accordion-button {
-  background-color: #D4AF37;
-  color: #FFFFFF;
+  background: #D4AF37;
+  color: white;
   padding: 1rem;
-  text-align: center;
   border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.2rem;
   width: 100%;
-  transition: background-color 0.3s ease;
-}
-.accordion-button:hover {
-  background-color: #EBD28B;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 .accordion-content {
-  background-color: #FFFFFF;
+  background: white;
   color: #1E2A39;
-  padding: 0rem 2rem;
-  font-size: 1rem;
-  border-top: 1px solid #D4AF37;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.4s ease;
+  padding: 0 1.5rem;
 }
-.accordion-item.active .accordion-content {
-  max-height: 500px;
-  overflow: auto;
+
+/* Other Sections */
+.about-us-section, .contact-section, .our-programs-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button[type="submit"] {
+  background: #D4AF37;
+  color: #1E2A39;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background: #EBD28B;
 }
 
 /* Footer */
 footer {
-  background-color: #1E2A39;
-  color: #FFFFFF;
-  text-align: center;
+  background: #1E2A39;
+  color: #fff;
   padding: 1rem;
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Section Headers */
-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
   text-align: center;
-  margin: 2rem 0;
-}
-
-/* About Us Section */
-.about-us-section {
-  padding: 4rem 2rem;
-  position: relative;
-  min-height: 50vh; /* Ensures it has enough height */
-  box-sizing: border-box;
-  text-align: center;
-}
-.about-us-section p {
-  text-indent: 1em; /* Adjust indentation */
-  margin: 0 auto;
-  max-width: 800px; /* Ensures text does not stretch too wide */
-}
-
-/* Our Programs Section */
-.our-programs-section {
-  padding: 4rem 2rem;
-  position: relative;
-  background: transparent; /* Transparent background to show parallax */
-}
-
-/* Contact Section */
-.contact-section {
-  padding: 4rem 2rem;
-  position: relative;
-  min-height: 50vh; /* Ensures it has enough height */
-  box-sizing: border-box;
-  text-align: center;
-}
-.contact-section::after {
-  content: "";
-  display: block;
-  height: 1px; /* Invisible element to ensure no cut-off */
+  position: static;
 }
 
 /* Responsive Design */
-
-/* Mobile Landscape and Portrait Orientation */
 @media screen and (max-width: 768px) {
-  /* Shrink elements for smaller screens */
-  
-  /* Navbar adjustments */
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  /* Show menu toggle for mobile */
   .menu-toggle {
     display: flex;
-    margin-left: auto;
   }
-  
-  /* Hide nav links initially on mobile */
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: white;
+    background: white;
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1000;
   }
-  
-  /* Show nav links when menu is open */
   .nav-links.active {
     display: flex;
   }
-  
-  /* Dropdown behavior on mobile */
-  .nav-links li {
-    margin-left: 0;
-  }
-  .nav-links li .dropdown {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-  }
-  .nav-links li.active .dropdown {
-    display: block;
-  }
-
-  /* Adjust text sizes for banners */
   .banner-text h1, .banner-content h1 {
     font-size: 2rem;
-  }
-  .banner-text p, .banner-content p {
-    font-size: 1.2rem;
-  }
-  .cta {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
-  /* Adjust banner and parallax images to fit mobile screen width */
-  .switching-banner img, 
-  .parallax-banner {
-    height: auto;
-    background-size: contain;
-    object-fit: contain;
-  }
-
-  /* Accordion Section */
-  .accordion-button {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-  .accordion-content {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  /* General Section Padding */
-  section {
-    padding: 2rem 1rem;
-  }
-
-  /* Adjust forms for smaller screens */
-  form input, form textarea {
-    font-size: 0.9rem;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-}
-
-/* Extra Small Screens (Mobile Portrait) */
-@media screen and (max-width: 480px) {
-  /* Further shrink text and buttons */
-  
-  /* Banner adjustments */
-  .banner-text h1, .banner-content h1 {
-    font-size: 1.5rem;
-  }
-  .banner-text p, .banner-content p {
-    font-size: 1rem;
   }
 }
