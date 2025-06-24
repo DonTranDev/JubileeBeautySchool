@@ -4,122 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jubilee Beauty School</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="DECAL.png" type="image/png" />
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
+  <header class="navbar">
+    <div class="container">
       <div class="logo">Jubilee Beauty School</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-      <button class="sign-in-button">
-        <a href="https://ibu.instructure.com/register_from_website" target="_blank" rel="noopener noreferrer">Sign In</a>
-      </button>
-      <div class="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Switching Banner -->
-  <div class="switching-banner">
-    <div class="banner-text">
-      <h1>Jubilee Beauty School</h1>
-      <p>Discover Your Hand in Beauty</p>
-    </div>
-  </div>
-
-  <!-- Parallax Banner -->
-  <section class="parallax-banner" id="home">
-    <div class="banner-content">
+  <section class="hero" id="home">
+    <div class="hero-content">
       <h1>Where Beauty Meets Expertise</h1>
-      <p>Join our cutting-edge beauty programs.</p>
-      <button class="cta" onclick="scrollToSection('programs')">Learn More</button>
+      <p>Empowering the next generation of beauty professionals.</p>
+      <button class="cta" onclick="scrollToSection('programs')">Explore Programs</button>
     </div>
   </section>
 
-  <!-- Programs Section -->
-  <section id="programs" class="our-programs-section">
-    <h2>Our Programs</h2>
-    <div class="accordion">
-      <div class="accordion-item">
+  <section class="programs" id="programs">
+    <h2 class="section-title">Our Programs</h2>
+    <div class="program-list">
+
+      <div class="program-item left">
         <button class="accordion-button">Cosmetologist</button>
         <div class="accordion-content">
-          <p>(1600 HOURS) This course trains students in cutting, styling, chemical processing, manicuring, and esthetics.</p>
+          <p>(1600 HOURS) Learn cutting, styling, chemical processing, and a foundation in nails and esthetics.</p>
         </div>
       </div>
-      <!-- Repeat this pattern for other programs -->
-      <div class="accordion-item">
+
+      <div class="program-item right">
         <button class="accordion-button">Manicurist</button>
         <div class="accordion-content">
-          <p>(600 HOURS) Training in nail care, manicures, pedicures, and artificial nails.</p>
+          <p>(600 HOURS) Focus on nail care, manicures, pedicures, and artificial enhancements.</p>
         </div>
       </div>
-      <div class="accordion-item">
+
+      <div class="program-item left">
         <button class="accordion-button">Esthetician</button>
         <div class="accordion-content">
-          <p>(750 HOURS) Training in skincare, facials, make-up application, and waxing.</p>
+          <p>(750 HOURS) Train in skincare, facials, waxing, and makeup application.</p>
         </div>
       </div>
-      <div class="accordion-item">
+
+      <div class="program-item right">
         <button class="accordion-button">Master Esthetician</button>
         <div class="accordion-content">
-          <p>(450 HOURS + Esthetician) Advanced training in dermal therapies, safety, and business skills.</p>
+          <p>(450 HOURS + Esthetician) Advanced skin therapies and techniques for licensed estheticians.</p>
         </div>
       </div>
-      <div class="accordion-item">
+
+      <div class="program-item left">
         <button class="accordion-button">Barber</button>
         <div class="accordion-content">
-          <p>(1000 HOURS) Learn cutting, braiding, shaving, and styling hair.</p>
+          <p>(1000 HOURS) Learn cutting, shaving, beard care, and men’s grooming.</p>
         </div>
       </div>
-      <div class="accordion-item">
+
+      <div class="program-item right">
         <button class="accordion-button">Hair Design</button>
         <div class="accordion-content">
-          <p>(1400 HOURS) Focused training in styling, cutting, and chemical hair processes.</p>
+          <p>(1400 HOURS) Comprehensive training in hair cutting, coloring, and chemical styling.</p>
         </div>
       </div>
-      <div class="accordion-item">
+
+      <div class="program-item left">
         <button class="accordion-button">Instructor</button>
         <div class="accordion-content">
-          <p>(600 HOURS) Learn instructional methods to teach beauty-related programs and become a licensed instructor.</p>
+          <p>(600 HOURS) Prepares beauty professionals to become licensed instructors across all programs.</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- About Us Section -->
-  <section id="about" class="about-us-section">
-    <h2>About Us</h2>
-    <p>At Jubilee Beauty School, we nurture both beauty and skill. Our hands-on training prepares students to succeed in the beauty industry.</p>
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about-text">
+      Jubilee Beauty School nurtures talent through hands-on training, expert instruction, and a commitment to excellence. Our programs are built to launch successful careers in the beauty industry.
+    </p>
   </section>
 
-  <!-- Contact Us Section -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <form onsubmit="sendMail(); return false;">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form" onsubmit="sendMail(); return false;">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>Or Call Us! +1 (206) 348-7983</p>
+    <p class="phone">Or call us: <strong>+1 (206) 348-7983</strong></p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Jubilee Beauty School. All rights reserved.</p>
   </footer>
@@ -127,4 +114,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
