@@ -234,6 +234,24 @@ footer {
   font-size: 0.9rem;
   margin-top: 4rem;
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: #D4AF37;
+}
+
 
 /* === MEDIA QUERIES === */
 @media (max-width: 768px) {
