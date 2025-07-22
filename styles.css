@@ -253,7 +253,7 @@ footer {
   background: #2D3B4F;
 }
 .sub-dropdown-content {
-  max-height: 0;
+  max-height: none;
   overflow: hidden;
   transition: max-height 0.3s ease;
   background: #f1f1f1;
@@ -262,7 +262,7 @@ footer {
   border-radius: 4px;
 }
 .sub-dropdown.open .sub-dropdown-content {
-  max-height: 200px;
+  max-height: none;
   padding: 0.5rem 1rem;
 }
 
