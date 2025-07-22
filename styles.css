@@ -152,7 +152,7 @@ a {
   padding-left: 1rem;
 }
 .program-item.active .accordion-content {
-  max-height: none;
+  max-height: 3000px;
 }
 
 /* === ABOUT === */
@@ -262,13 +262,13 @@ footer {
   border-radius: 4px;
 }
 .sub-dropdown.open .sub-dropdown-content {
-  max-height: none;
+  max-height: 2500px;
   padding: 0.5rem 1rem;
 }
 
 /* Fix clipping on mobile */
 @media (max-width: 768px) {
   .program-item.active .accordion-content {
-    max-height: none;
+    max-height: 2500px;
   }
 }
