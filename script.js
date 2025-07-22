@@ -6,8 +6,11 @@ accordionButtons.forEach(button => {
     const currentItem = button.closest('.program-item');
     const isActive = currentItem.classList.contains('active');
 
+    // Close all program items
     document.querySelectorAll('.program-item').forEach(item => {
       item.classList.remove('active');
+      // Close all sub-dropdowns too
+      item.querySelectorAll('.sub-dropdown').forEach(sub => sub.classList.remove('open'));
     });
 
     if (!isActive) {
@@ -16,7 +19,21 @@ accordionButtons.forEach(button => {
   });
 });
 
-// === Smooth Scroll Helper (optional use for Learn More button) ===
+// === Sub-dropdowns ===
+document.querySelectorAll('.sub-dropdown-button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sub = btn.parentElement;
+    const isOpen = sub.classList.contains('open');
+
+    sub.parentElement.querySelectorAll('.sub-dropdown').forEach(s => s.classList.remove('open'));
+
+    if (!isOpen) {
+      sub.classList.add('open');
+    }
+  });
+});
+
+// === Smooth Scroll Helper ===
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -101,25 +118,3 @@ function applyStaggeredPrograms() {
 window.addEventListener('load', applyStaggeredPrograms);
 window.addEventListener('resize', applyStaggeredPrograms);
 
-// === SUB-DROPDOWN FUNCTIONALITY ===
-document.querySelectorAll('.sub-dropdown-button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const sub = btn.parentElement;
-    const isOpen = sub.classList.contains('open');
-
-    // Close all siblings
-    sub.parentElement.querySelectorAll('.sub-dropdown').forEach(s => s.classList.remove('open'));
-
-    if (!isOpen) {
-      sub.classList.add('open');
-    }
-  });
-});
-
-// Ensure sub-dropdowns close when main accordion closes
-const accordionButtons = document.querySelectorAll('.accordion-button');
-accordionButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('.sub-dropdown').forEach(s => s.classList.remove('open'));
-  });
-});
