@@ -152,7 +152,7 @@ a {
   padding-left: 1rem;
 }
 .program-item.active .accordion-content {
-  max-height: 700px;
+  max-height: none;
 }
 
 /* === ABOUT === */
