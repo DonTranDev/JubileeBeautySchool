@@ -132,6 +132,22 @@ html {
   align-self: flex-end;
   margin-right: 5%;
 }
+.program-image {
+  border-radius: 6px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.program-image:hover {
+  transform: scale(1.03);
+}
+
 .accordion-button {
   width: 100%;
   background: #D4AF37;
