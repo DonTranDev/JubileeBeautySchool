@@ -13,9 +13,18 @@ accordionButtons.forEach(button => {
       item.querySelectorAll('.sub-dropdown').forEach(sub => sub.classList.remove('open'));
     });
 
-    if (!isActive) {
-      currentItem.classList.add('active');
-    }
+   if (!isActive) {
+  currentItem.classList.add('active');
+
+  // Scroll into view after expansion
+  setTimeout(() => {
+    currentItem.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 200);
+}
+
   });
 });
 
