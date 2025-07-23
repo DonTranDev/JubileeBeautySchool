@@ -114,6 +114,22 @@ html {
   flex-direction: column;
   gap: 2rem;
 }
+
+/* Desktop only: outward stagger effect */
+@media (min-width: 1024px) {
+  .program-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+    width: 75%;
+  }
+
+  .program-item:nth-child(even) {
+    margin-right: 0;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+
 .program-item {
   background: white;
   padding: 1.5rem;
