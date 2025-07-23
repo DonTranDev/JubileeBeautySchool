@@ -113,17 +113,3 @@ function sendMail() {
   window.location.href = `mailto:jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-// === Responsive Program Panel Stagger ===
-function applyStaggeredPrograms() {
-  const programItems = document.querySelectorAll('.program-item');
-  programItems.forEach((item, index) => {
-    item.style.marginLeft = index % 2 === 0 ? '5%' : 'auto';
-    item.style.marginRight = index % 2 !== 0 ? '5%' : 'auto';
-    item.style.width = '90%';
-    item.style.maxWidth = '700px';
-  });
-}
-
-window.addEventListener('load', applyStaggeredPrograms);
-window.addEventListener('resize', applyStaggeredPrograms);
-
