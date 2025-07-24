@@ -113,3 +113,35 @@ function sendMail() {
   window.location.href = `mailto:jubileebeautyschool@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+function updateBodyPaddingForMobile() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    const navHeight = navbar.offsetHeight;
+    document.body.style.paddingTop = navHeight + 'px';
+  } else {
+    // Reset padding when NOT mobile (optional)
+    document.body.style.paddingTop = '';
+  }
+}
+
+// Simple debounce helper
+function debounce(fn, delay) {
+  let timer;
+  return function() {
+    clearTimeout(timer);
+    timer = setTimeout(fn, delay);
+  }
+}
+
+window.addEventListener('load', updateBodyPaddingForMobile);
+window.addEventListener('resize', debounce(updateBodyPaddingForMobile, 150));
+
+const toggleButton = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+toggleButton.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
