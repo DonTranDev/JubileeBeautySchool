@@ -354,12 +354,17 @@ footer {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    align-items: left;
-    gap: 1rem;
-    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
     background: white;
-    padding: 1rem 0;
+    width: 100%;
     border-top: 1px solid #ddd;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
   }
 
   .nav-links li {
@@ -370,7 +375,7 @@ footer {
   .nav-links a {
     display: block;
     width: 100%;
-    padding: 0.75rem 0;
+    padding: 1rem;
     color: #1E2A39;
     font-weight: 600;
   }
@@ -378,24 +383,6 @@ footer {
   .nav-links a:hover {
     background-color: #D4AF37;
     color: white;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none; /* hide menu by default */
-    flex-direction: column;
-    background-color: #1E2A39;
-    position: absolute;
-    top: 60px; /* below navbar */
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
-  .nav-menu.active {
-    display: flex; /* show when active */
   }
 
   .menu-toggle {
@@ -407,6 +394,7 @@ footer {
     cursor: pointer;
     border-radius: 6px;
     color: #1E2A39;
+    font-size: 1.2rem;
+    margin-left: auto;
   }
 }
-
