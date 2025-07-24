@@ -380,3 +380,15 @@ footer {
     color: white;
   }
 }
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 60px;
+  }
+  .navbar {
+    height: var(--navbar-height);
+  }
+  body {
+    padding-top: var(--navbar-height);
+  }
+}
