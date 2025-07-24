@@ -147,5 +147,6 @@ toggleButton.addEventListener('click', () => {
 });
 
 function toggleMenu() {
-  document.querySelector('.nav-menu').classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('active');
 }
+
