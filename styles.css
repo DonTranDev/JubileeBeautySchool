@@ -382,9 +382,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --navbar-height: 60px;
-  }
   .navbar {
     height: var(--navbar-height);
   }
