@@ -382,10 +382,31 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    height: var(--navbar-height);
+  .nav-menu {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    background-color: #1E2A39;
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
-  body {
-    padding-top: var(--navbar-height);
+
+  .nav-menu.active {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: #D4AF37;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #1E2A39;
   }
 }
+
