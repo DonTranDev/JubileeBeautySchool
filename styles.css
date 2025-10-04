@@ -21,6 +21,9 @@ html {
 }
 
 /* === NAVBAR === */
+/* Hide hamburger on desktop by default */
+.menu-toggle { display: none; }
+
 .navbar {
   background: white;
   color: #1E2A39;
@@ -397,4 +400,45 @@ footer {
     font-size: 1.2rem;
     margin-left: auto;
   }
+}
+
+
+/* === GALLERY MARQUEE === */
+.gallery-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  will-change: transform;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-track img {
+  height: 180px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 768px) {
+  .marquee-track img { height: 220px; }
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
