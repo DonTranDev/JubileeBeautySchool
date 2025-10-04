@@ -141,13 +141,30 @@ window.addEventListener('resize', debounce(updateBodyPaddingForMobile, 150));
 
 const toggleButton = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
-
-toggleButton.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
+if (toggleButton && navMenu) {
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+}
 
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 
+
+
+// === Gallery Marquee (auto-scroll left) ===
+(function setupGalleryMarquee(){
+  const track = document.getElementById('galleryTrack');
+  if (!track) return;
+  const imgs = Array.from(track.querySelectorAll('img'));
+  if (imgs.length === 0) return;
+
+  // Duplicate the images to make the loop seamless
+  track.append(...imgs.map(img => img.cloneNode(true)));
+
+  // If total width is short, speed stays the same; otherwise animation covers 50% width
+  // No extra JS tick needed because CSS keyframes handle movement.
+  // Pause on user hover handled via CSS (animation-play-state).
+})();
 
