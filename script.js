@@ -50,31 +50,39 @@ function scrollToSection(sectionId) {
   }
 }
 
-// === Dynamic Year in Footer ===
-document.getElementById('year').textContent = new Date().getFullYear();
+// === Optional: Send Mail ===
+function sendMail() {
+  const name = document.getElementById('name')?.value;
+  const email = document.getElementById('email')?.value;
+  const message = document.getElementById('message')?.value;
 
-// === Responsive Dropdown Handling for Mobile ===
-const dropdowns = document.querySelectorAll('.dropdown');
+  if (!name || !email || !message) {
+    alert('Please fill in all fields.');
+    return;
+  }
 
-dropdowns.forEach(dropdown => {
-  const link = dropdown.querySelector('a');
-
-  link.addEventListener('click', (e) => {
-    // If on mobile (nav-links in column), toggle dropdown instead of plain anchor behavior
-    const navLinks = document.querySelector('.nav-links');
-    const isMobile = window.getComputedStyle(navLinks).flexDirection === 'column';
-
-    if (isMobile) {
-      e.preventDefault();
-      dropdown.classList.toggle('open');
-    }
-  });
-});
+  const mailtoLink = `mailto:info@jubileebeautyschool.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + email)}`;
+  window.location.href = mailtoLink;
+}
 
 // === Mobile Menu Toggle ===
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-links');
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
 
+// === Gallery Marquees (auto-scroll) ===
+(function setupGalleryMarquee(){
+  const tracks = document.querySelectorAll('.gallery .marquee-track');
+  if (!tracks.length) return;
+
+  tracks.forEach(track => {
+    const imgs = Array.from(track.querySelectorAll('img'));
+    if (!imgs.length) return;
+
+    // Duplicate the images to make the loop seamless on each row
+    track.append(...imgs.map(img => img.cloneNode(true)));
+  });
+})();
 if (menuToggle && navMenu) {
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
