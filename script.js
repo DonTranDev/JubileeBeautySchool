@@ -15,25 +15,80 @@ accordionButtons.forEach(button => {
 
    if (!isActive) {
       currentItem.classList.add('active');
+
+      // Scroll into view smoothly when opening on smaller screens
+      setTimeout(() => {
+        currentItem.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 200);
     }
   });
 });
 
-// === Sub-Dropdown Toggle ===
-const subDropdownButtons = document.querySelectorAll('.sub-dropdown-button');
+// === Sub-dropdowns ===
+document.querySelectorAll('.sub-dropdown-button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const sub = btn.parentElement;
+    const isOpen = sub.classList.contains('open');
 
-subDropdownButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const subDropdown = button.closest('.sub-dropdown');
-    const isOpen = subDropdown.classList.contains('open');
+    // Close all sub-dropdowns inside the same program item
+    const container = sub.closest('.sub-dropdowns');
+    container.querySelectorAll('.sub-dropdown').forEach(s => s.classList.remove('open'));
 
-    // Close all sub-dropdowns within the same program item
-    const programItem = button.closest('.program-item');
-    programItem.querySelectorAll('.sub-dropdown').forEach(sub => sub.classList.remove('open'));
-
-    // If it was not open, now open this one
+    // Re-open if it was closed
     if (!isOpen) {
-      subDropdown.classList.add('open');
+      sub.classList.add('open');
+    }
+  });
+});
+
+// === Scroll to Section ===
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offsetTop = section.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// === Send Mail (still here if you re-add the form) ===
+function sendMail() {
+  const name = document.getElementById('name')?.value;
+  const email = document.getElementById('email')?.value;
+  const message = document.getElementById('message')?.value;
+
+  if (!name || !email || !message) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+  const mailtoLink = `mailto:jubileebeautyschool@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + email)}`;
+  window.location.href = mailtoLink;
+}
+
+// === Mobile Menu Toggle ===
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+
+// === Gallery Marquees (auto-scroll) ===
+(function setupGalleryMarquee(){
+  const tracks = document.querySelectorAll('.gallery .marquee-track');
+  if (!tracks.length) return;
+
+  tracks.forEach(track => {
+    const imgs = Array.from(track.querySelectorAll('img'));
+    if (!imgs.length) return;
+
+    // Duplicate the images to make the loop seamless on each row
+    track.append(...imgs.map(img => img.cloneNode(true)));
+  });
+})();
     }
   });
 });
@@ -61,7 +116,7 @@ function sendMail() {
     return;
   }
 
-  const mailtoLink = `mailto:info@jubileebeautyschool.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + email)}`;
+  const mailtoLink = `mailto:jubileebeautyschool@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + email)}`;
   window.location.href = mailtoLink;
 }
 
