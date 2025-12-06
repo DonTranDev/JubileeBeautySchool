@@ -33,17 +33,20 @@
         </button>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
+
+          <!-- Programs dropdown: items scroll to programs section -->
           <li class="dropdown">
             <a href="#programs">Programs</a>
             <ul class="dropdown-menu">
-              <li><a href="cosmetology.html">Cosmetologist</a></li>
-              <li><a href="esthetician.html">Esthetician</a></li>
-              <li><a href="hair-design.html">Hair Designer</a></li>
-              <li><a href="master-esthetician.html">Master Esthetician</a></li>
-              <li><a href="manicurist.html">Manicurist</a></li>
-              <li><a href="barber.html">Barber</a></li>
+              <li><a href="#program-cosmetologist">Cosmetologist</a></li>
+              <li><a href="#program-esthetician">Esthetician</a></li>
+              <li><a href="#program-hair-designer">Hair Designer</a></li>
+              <li><a href="#program-master-esthetician">Master Esthetician</a></li>
+              <li><a href="#program-manicurist">Manicurist</a></li>
+              <li><a href="#program-barber">Barber</a></li>
             </ul>
           </li>
+
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
@@ -65,7 +68,6 @@
   </section>
 
   <!-- FULL-WIDTH BUILDING BANNER -->
-  <!-- Place your exterior building photo as "building.jpg" in the root folder -->
   <section class="building-banner">
     <img
       src="building.jpg"
@@ -79,7 +81,7 @@
     <h2 class="section-title">Our Programs</h2>
     <div class="program-list">
       <!-- Cosmetologist -->
-      <div class="program-item">
+      <div class="program-item" id="program-cosmetologist">
         <button class="accordion-button">
           Cosmetologist
           <img
@@ -91,7 +93,7 @@
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='cosmetology.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -136,7 +138,7 @@
       </div>
 
       <!-- Esthetician -->
-      <div class="program-item">
+      <div class="program-item" id="program-esthetician">
         <button class="accordion-button">
           Esthetician
           <img
@@ -148,7 +150,7 @@
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='esthetician.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -192,7 +194,7 @@
       </div>
 
       <!-- Hair Designer -->
-      <div class="program-item">
+      <div class="program-item" id="program-hair-designer">
         <button class="accordion-button">
           Hair Designer
           <img
@@ -204,7 +206,7 @@
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='hair-design.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -249,7 +251,7 @@
       </div>
 
       <!-- Master Esthetician -->
-      <div class="program-item">
+      <div class="program-item" id="program-master-esthetician">
         <button class="accordion-button">
           Master Esthetician
           <img
@@ -261,7 +263,7 @@
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='master-esthetician.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -305,7 +307,7 @@
       </div>
 
       <!-- Manicurist -->
-      <div class="program-item">
+      <div class="program-item" id="program-manicurist">
         <button class="accordion-button">
           Manicurist
           <img
@@ -317,7 +319,7 @@
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='manicurist.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -361,15 +363,19 @@
       </div>
 
       <!-- Barber -->
-      <div class="program-item">
+      <div class="program-item" id="program-barber">
         <button class="accordion-button">
           Barber
-          <img src="barber.jpg" alt="Barber" class="program-image" />
+          <img
+            src="barber.jpg"
+            alt="Barber"
+            class="program-image"
+          />
         </button>
         <div class="accordion-content">
           <button
             class="apply-button"
-            onclick="window.location.href='barber.html'"
+            onclick="window.location.href='application.html'"
           >
             Apply Now
           </button>
@@ -489,7 +495,7 @@
     </div>
   </section>
 
-  <!-- ABOUT (FULL-WIDTH IMAGE WITH OVERLAY TEXT) -->
+  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-overlay">
       <h2 class="section-title">About Us</h2>
@@ -504,7 +510,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (INFO + MAP) -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2 class="section-title">Contact Us</h2>
     <div class="contact-wrapper">
