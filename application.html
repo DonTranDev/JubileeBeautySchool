@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply – Jubilee Beauty School</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="icon" type="image/png" href="DECAL.png" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="DECAL.png" alt="Jubilee Beauty School logo" />
+        <span>Jubilee Beauty School</span>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- APPLICATION SECTION -->
+  <section class="contact" style="padding-top:6rem;">
+    <h2 class="section-title">Application Form</h2>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <p style="margin-bottom: 1.5rem; color:#1e2a39;">
+        Please fill out the form below to apply to Jubilee Beauty School. We will review your
+        application and contact you at the email or phone number you provide.
+      </p>
+
+      <form
+        action="mailto:jubileebeautyschool@gmail.com"
+        method="post"
+        enctype="text/plain"
+        style="display:flex; flex-direction:column; gap:1rem;"
+      >
+        <div>
+          <label for="name" style="font-weight:600;">Full Name</label><br />
+          <input
+            type="text"
+            id="name"
+            name="Full Name"
+            required
+            style="width:100%; padding:0.7rem; border-radius:6px; border:1px solid #ccc;"
+          />
+        </div>
+
+        <div>
+          <label for="email" style="font-weight:600;">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            required
+            style="width:100%; padding:0.7rem; border-radius:6px; border:1px solid #ccc;"
+          />
+        </div>
+
+        <div>
+          <label for="phone" style="font-weight:600;">Phone Number</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="Phone"
+            style="width:100%; padding:0.7rem; border-radius:6px; border:1px solid #ccc;"
+          />
+        </div>
+
+        <div>
+          <label for="program" style="font-weight:600;">Program of Interest</label><br />
+          <select
+            id="program"
+            name="Program"
+            required
+            style="width:100%; padding:0.7rem; border-radius:6px; border:1px solid #ccc;"
+          >
+            <option value="">Select a program</option>
+            <option value="Cosmetologist">Cosmetologist</option>
+            <option value="Esthetician">Esthetician</option>
+            <option value="Hair Designer">Hair Designer</option>
+            <option value="Master Esthetician">Master Esthetician</option>
+            <option value="Manicurist">Manicurist</option>
+            <option value="Barber">Barber</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" style="font-weight:600;">Tell us a little about yourself</label><br />
+          <textarea
+            id="message"
+            name="About Applicant"
+            rows="5"
+            style="width:100%; padding:0.7rem; border-radius:6px; border:1px solid #ccc;"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          style="background:#d4af37; color:#1e2a39; border:none; padding:0.8rem 1.8rem; border-radius:999px; font-weight:600; cursor:pointer;"
+        >
+          Submit Application
+        </button>
+
+        <p style="font-size:0.85rem; color:#555; margin-top:0.5rem;">
+          Note: Submitting will open your email app with the form details so you can send
+          your application directly to us.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Jubilee Beauty School. All rights reserved.</p>
+    <div class="social-icons">
+      <a
+        href="https://www.facebook.com/people/Julibee-Beauty-School/61565403652283/#"
+        target="_blank"
+        aria-label="Facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/jubileebeautyschool/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://canvas.instructure.com/"
+        target="_blank"
+        aria-label="Canvas"
+      >
+        <i class="fas fa-chalkboard-teacher"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
