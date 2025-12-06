@@ -42,7 +42,7 @@ document.querySelectorAll('.sub-dropdown-button').forEach((btn) => {
   });
 });
 
-// === Smooth scroll helper ===
+// === Smooth scroll helper (used by Explore Programs button) ===
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
@@ -59,6 +59,53 @@ function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 
+// === Programs dropdown toggle (click to open/close) ===
+const programsDropdownLink = document.querySelector('.dropdown > a');
+
+if (programsDropdownLink) {
+  programsDropdownLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const parent = programsDropdownLink.parentElement;
+    const isOpen = parent.classList.contains('open');
+
+    document
+      .querySelectorAll('.dropdown')
+      .forEach((d) => d.classList.remove('open'));
+
+    if (!isOpen) {
+      parent.classList.add('open');
+    }
+  });
+}
+
+// === Smooth scroll for in-page anchor links (including Programs menu items) ===
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  // Skip the top-level Programs link (handled above)
+  if (link === programsDropdownLink) return;
+
+  link.addEventListener('click', (e) => {
+    const targetId = link.getAttribute('href').substring(1);
+    if (!targetId) return;
+
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    e.preventDefault();
+
+    // Close dropdowns and mobile nav
+    document
+      .querySelectorAll('.dropdown')
+      .forEach((d) => d.classList.remove('open'));
+    document.querySelector('.nav-links')?.classList.remove('active');
+
+    const offsetTop = targetEl.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth',
+    });
+  });
+});
+
 // === Gallery marquee: duplicate images for seamless scroll (both rows) ===
 (function setupGalleryMarquee() {
   const tracks = document.querySelectorAll('.gallery .marquee-track');
@@ -72,20 +119,3 @@ function toggleMenu() {
     track.append(...imgs.map((img) => img.cloneNode(true)));
   });
 })();
-
-// === (Optional) Email helper if you re-add a contact form ===
-function sendMail() {
-  const name = document.getElementById('name')?.value;
-  const email = document.getElementById('email')?.value;
-  const message = document.getElementById('message')?.value;
-
-  if (!name || !email || !message) {
-    alert('Please fill in all fields.');
-    return;
-  }
-
-  const mailtoLink = `mailto:jubileebeautyschool@gmail.com?subject=Message from ${encodeURIComponent(
-    name
-  )}&body=${encodeURIComponent(message + '\n\nFrom: ' + email)}`;
-  window.location.href = mailtoLink;
-}
