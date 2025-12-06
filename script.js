@@ -119,3 +119,32 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     track.append(...imgs.map((img) => img.cloneNode(true)));
   });
 })();
+
+// === Fade in images when scrolled into view (excluding gallery images) ===
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  const allImages = document.querySelectorAll('img');
+
+  allImages.forEach((img) => {
+    // Skip gallery images
+    if (img.closest('.gallery')) return;
+
+    // Optional: if you also want to skip icons or tiny images, you can add checks here
+
+    img.classList.add('fade-in-img');
+    observer.observe(img);
+  });
+});
