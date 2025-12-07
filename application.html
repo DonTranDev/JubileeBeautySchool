@@ -182,8 +182,9 @@
       const ACCESS_KEY = 'e9cbe5be-a0bb-403b-818c-0a8dfd8b30f6';
 
       function isValidEmail(value) {
-        return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);
-      }
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        }
+
 
       emailInput.addEventListener('input', () => {
         if (!emailInput.value) {
