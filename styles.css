@@ -129,7 +129,7 @@ button {
 
 /* === HERO === */
 .hero {
-  background: url('Background3.png') center/cover no-repeat fixed;
+  background: url('DECAL.png') center/cover no-repeat fixed;
   min-height: 100vh;
   display: flex;
   justify-content: center;
