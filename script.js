@@ -56,7 +56,7 @@ function scrollToSection(sectionId) {
 
 // === Mobile menu toggle ===
 function toggleMenu() {
-  document.querySelector('.nav-links').classList.toggle('active');
+  document.querySelector('.nav-links')?.classList.toggle('active');
 }
 
 // === Programs dropdown toggle (click to open/close) ===
@@ -84,7 +84,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   if (link === programsDropdownLink) return;
 
   link.addEventListener('click', (e) => {
-    const targetId = link.getAttribute('href').substring(1);
+    const targetId = link.getAttribute('href')?.substring(1);
     if (!targetId) return;
 
     const targetEl = document.getElementById(targetId);
@@ -120,9 +120,53 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 })();
 
-// === Fade in images when scrolled into view (excluding gallery images) ===
+// === Unified animations on load + on scroll ===
 document.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver(
+  /**
+   * 1) APPEAR system for ANY element with class .appear
+   * - If it's already on screen when the page loads, it fades in immediately.
+   * - If it’s below the fold, it fades in when scrolled into view.
+   *
+   * This works with your CSS:
+   * .appear { opacity: 0; transform...; transition... }
+   * .appear.is-visible { opacity: 1; transform... }
+   */
+  const appearEls = Array.from(document.querySelectorAll('.appear'));
+
+  if (appearEls.length) {
+    const appearObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const el = entry.target;
+
+          // Optional stagger: use data-appear-order if present (nice for hero)
+          const order = Number(el.getAttribute('data-appear-order'));
+          const delay = Number.isFinite(order) ? 120 + order * 90 : 120;
+
+          setTimeout(() => el.classList.add('is-visible'), delay);
+
+          obs.unobserve(el);
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -8% 0px',
+      }
+    );
+
+    appearEls.forEach((el) => appearObserver.observe(el));
+  }
+
+  /**
+   * 2) Keep your existing image fade-in behavior (non-gallery images)
+   * - Adds .fade-in-img
+   * - Observes and toggles .visible
+   *
+   * NOTE: This is separate from .appear so it won't conflict.
+   */
+  const imgObserver = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -142,9 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Skip gallery images
     if (img.closest('.gallery')) return;
 
-    // Optional: if you also want to skip icons or tiny images, you can add checks here
-
     img.classList.add('fade-in-img');
-    observer.observe(img);
+    imgObserver.observe(img);
   });
 });
