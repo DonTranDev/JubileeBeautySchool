@@ -43,7 +43,7 @@ button {
 }
 
 .hero-photo.appear {
-  transform: translateY(14px) scale(1.02);
+  transform: translateY(14px);
 }
 
 /* === NAVBAR === */
