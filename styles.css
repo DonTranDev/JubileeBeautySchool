@@ -42,7 +42,6 @@ button {
   filter: blur(0);
 }
 
-/* Remove the zoom softness for the hero image */
 .hero-photo.appear {
   transform: translateY(14px);
 }
@@ -155,36 +154,28 @@ button {
   align-items: stretch;
   color: white;
   position: relative;
-
-  /* Keep left side padded but allow right image to go edge-to-edge */
-  padding: 0;
+  padding: 0 1rem;
 }
 
 /* Split hero: left message + right photo */
 .hero-inner {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0; /* IMPORTANT: no gap between columns for true edge-to-edge image */
-  align-items: stretch;
-
+  gap: 2.5rem;
+  align-items: center;
   /* account for fixed navbar */
   padding-top: 6rem;
-  padding-bottom: 0;
-
-  /* center the content area width while still allowing the right image to hit the edge */
-  /* We keep the left side content constrained inside hero-left */
+  padding-bottom: 2.5rem;
 }
 
-/* LEFT HALF */
 .hero-left {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  /* give the left side the same horizontal padding you had before */
-  padding: 0 1rem;
 }
 
 .hero-content {
@@ -193,21 +184,17 @@ button {
   max-width: 520px;
 }
 
-/* RIGHT HALF (edge-to-edge) */
 .hero-right {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Fill the entire right half */
 .hero-photo {
   width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
+  max-width: 560px;
+  max-height: 72vh;
   object-fit: cover;
-
-  /* remove rounded/shadow */
   border-radius: 0;
   box-shadow: none;
 }
@@ -221,6 +208,18 @@ button {
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+}
+
+/* Stack on small screens */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 6.5rem;
+  }
+  .hero-photo {
+    max-height: 52vh;
+  }
 }
 
 .cta {
@@ -240,27 +239,6 @@ button {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Stack on small screens */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    padding-top: 6.5rem;
-  }
-
-  .hero-left {
-    padding: 0 1rem;
-  }
-
-  /* On mobile, keep the image visible and tall but not ridiculous */
-  .hero-right {
-    height: 52vh;
-  }
-
-  .hero-photo {
-    height: 100%;
-  }
-}
-
 /* === SECTIONS & SPACING === */
 section {
   padding: 4rem 1.5rem;
@@ -277,25 +255,12 @@ section + section {
   font-family: 'Playfair Display', serif;
 }
 
-/* === BUILDING BANNER + WHITE GAP CONTRAST STRIP === */
-/* This creates the slight white gap between hero and building banner */
+/* === BUILDING BANNER === */
 .building-banner {
   width: 100%;
-
-  /* white contrast strip to hide transparency edge + create separation */
-  background: white;
-
-  /* controls the size of the white gap above the building image */
-  padding-top: 18px;
-
-  /* keep a little space below too if you want symmetry; set to 0 if not */
-  padding-bottom: 0;
-
-  /* remove the big margin-top so the gap is controlled by padding-top */
-  margin-top: 0;
+  margin-top: 4rem;
 }
 
-/* Building image still fills full screen width */
 .building-banner-image {
   width: 100%;
   max-height: 500px;
@@ -710,4 +675,3 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-
