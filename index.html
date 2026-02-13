@@ -18,9 +18,10 @@
   />
   <link rel="icon" type="image/png" href="DECAL.png" />
 </head>
+
 <body>
   <!-- NAVBAR -->
-  <header class="navbar appear">
+  <header class="navbar appear" data-appear-order="-1">
     <div class="container">
       <div class="logo">
         <img src="DECAL.png" alt="Jubilee Beauty School logo" />
@@ -30,6 +31,7 @@
         <button class="menu-toggle" onclick="toggleMenu()">
           <i class="fas fa-bars"></i>
         </button>
+
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
 
@@ -58,23 +60,30 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-inner">
-      <!-- Left half: keep the same message + CTA, but center it within the left side -->
+      <!-- Left half -->
       <div class="hero-left">
-        <div class="hero-content appear">
-          <h1>Where Beauty Meets Expertise</h1>
-          <p>Empowering the next generation of beauty professionals.</p>
-          <button class="cta" onclick="scrollToSection('programs')">
+        <div class="hero-content">
+          <h1 class="appear" data-appear-order="0">Where Beauty Meets Expertise</h1>
+          <p class="appear" data-appear-order="1">
+            Empowering the next generation of beauty professionals.
+          </p>
+          <button
+            class="cta appear"
+            data-appear-order="2"
+            onclick="scrollToSection('programs')"
+          >
             Explore Programs
           </button>
         </div>
       </div>
 
-      <!-- Right half: hero image (soft edges, no gray overlay) -->
+      <!-- Right half -->
       <div class="hero-right">
         <img
           src="7M2A0681.JPG"
           alt="Jubilee Beauty School students"
           class="hero-photo appear"
+          data-appear-order="3"
           loading="eager"
         />
       </div>
@@ -529,20 +538,17 @@
     <h2 class="section-title">Contact Us</h2>
     <div class="contact-wrapper">
       <div class="contact-info">
-        <p>
-          <strong>Address:</strong> 16824 44th Ave W, Lynnwood, WA 98037
-        </p>
+        <p><strong>Address:</strong> 16824 44th Ave W, Lynnwood, WA 98037</p>
         <p>
           <strong>Phone:</strong>
           <a href="tel:12063487983">(206) 348-7983</a>
         </p>
         <p>
           <strong>Email:</strong>
-          <a href="mailto:jubileebeautyschool@gmail.com"
-            >jubileebeautyschool@gmail.com</a
-          >
+          <a href="mailto:jubileebeautyschool@gmail.com">jubileebeautyschool@gmail.com</a>
         </p>
       </div>
+
       <div class="contact-map">
         <iframe
           width="100%"
