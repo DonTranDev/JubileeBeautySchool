@@ -20,7 +20,7 @@
 </head>
 <body>
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar appear">
     <div class="container">
       <div class="logo">
         <img src="DECAL.png" alt="Jubilee Beauty School logo" />
@@ -57,12 +57,27 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Where Beauty Meets Expertise</h1>
-      <p>Empowering the next generation of beauty professionals.</p>
-      <button class="cta" onclick="scrollToSection('programs')">
-        Explore Programs
-      </button>
+    <div class="hero-inner">
+      <!-- Left half: keep the same message + CTA, but center it within the left side -->
+      <div class="hero-left">
+        <div class="hero-content appear">
+          <h1>Where Beauty Meets Expertise</h1>
+          <p>Empowering the next generation of beauty professionals.</p>
+          <button class="cta" onclick="scrollToSection('programs')">
+            Explore Programs
+          </button>
+        </div>
+      </div>
+
+      <!-- Right half: hero image (soft edges, no gray overlay) -->
+      <div class="hero-right">
+        <img
+          src="7M2A0681.JPG"
+          alt="Jubilee Beauty School students"
+          class="hero-photo appear"
+          loading="eager"
+        />
+      </div>
     </div>
   </section>
 
