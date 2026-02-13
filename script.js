@@ -122,15 +122,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 // === Unified animations on load + on scroll ===
 document.addEventListener('DOMContentLoaded', () => {
-  /**
-   * 1) APPEAR system for ANY element with class .appear
-   * - If it's already on screen when the page loads, it fades in immediately.
-   * - If it’s below the fold, it fades in when scrolled into view.
-   *
-   * This works with your CSS:
-   * .appear { opacity: 0; transform...; transition... }
-   * .appear.is-visible { opacity: 1; transform... }
-   */
+  // 1) APPEAR system for ANY element with class .appear
   const appearEls = Array.from(document.querySelectorAll('.appear'));
 
   if (appearEls.length) {
@@ -141,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const el = entry.target;
 
-          // Optional stagger: use data-appear-order if present (nice for hero)
+          // Optional stagger: use data-appear-order if present
           const order = Number(el.getAttribute('data-appear-order'));
           const delay = Number.isFinite(order) ? 120 + order * 90 : 120;
 
@@ -159,13 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     appearEls.forEach((el) => appearObserver.observe(el));
   }
 
-  /**
-   * 2) Keep your existing image fade-in behavior (non-gallery images)
-   * - Adds .fade-in-img
-   * - Observes and toggles .visible
-   *
-   * NOTE: This is separate from .appear so it won't conflict.
-   */
+  // 2) Fade in images when scrolled into view (excluding gallery images)
+  //    (Skip images already handled by .appear, e.g. hero image)
   const imgObserver = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
@@ -185,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
   allImages.forEach((img) => {
     // Skip gallery images
     if (img.closest('.gallery')) return;
+
+    // Skip images already handled by the .appear system (ex: hero photo)
+    if (img.classList.contains('appear')) return;
 
     img.classList.add('fade-in-img');
     imgObserver.observe(img);
