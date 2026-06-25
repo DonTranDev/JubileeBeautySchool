@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #1e2a39;
   color: white;
   scroll-behavior: smooth;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -96,6 +102,34 @@ button {
 
 .nav-links a:hover {
   color: #d4af37;
+}
+
+.nav-apply {
+  margin-left: 0.5rem;
+}
+
+.nav-apply-link {
+  background: #1e2a39;
+  color: white !important;
+  border: none;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.nav-apply-link:hover {
+  background: #24344a !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(30, 42, 57, 0.22);
 }
 
 /* Nav dropdown */
@@ -645,6 +679,17 @@ footer {
     color: white;
   }
 
+  .nav-apply {
+    margin-left: 0;
+    padding: 0.4rem 0 0.8rem;
+  }
+
+  .nav-apply-link {
+    width: auto !important;
+    display: inline-flex !important;
+    padding: 0.55rem 1.4rem !important;
+  }
+
   .menu-toggle {
     display: inline-flex;
     align-items: center;
@@ -674,4 +719,43 @@ footer {
 .fade-in-img.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* === SLEEK POLISH === */
+.navbar {
+  backdrop-filter: saturate(150%) blur(10px);
+}
+
+.program-item,
+.service-card,
+.contact-map iframe {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-item:hover,
+.service-card:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(212, 175, 55, 0.55);
+  outline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16);
 }
