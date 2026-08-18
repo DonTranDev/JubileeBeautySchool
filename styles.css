@@ -835,15 +835,17 @@ but the animation on .marquee-track continues.
 
   padding: 0;
 
-  min-height: 500px;
+  min-height: 750px;
 
   display: flex;
   align-items: stretch;
 
   background:
     url("HollyVietTran.png")
-    center / cover
+    center / contain
     no-repeat;
+
+  background-color: #1e2a39;
 }
 
 .about-overlay {
