@@ -429,6 +429,7 @@ function openLightbox(imageSource) {
 
   lightboxImage.src =
     absoluteSource;
+  lightboxImage.hidden = false;
 
   lightbox.classList.add('active');
 
@@ -478,6 +479,7 @@ function closeLightbox() {
       lightboxImage &&
       !lightbox.classList.contains('active')
     ) {
+      lightboxImage.removeAttribute('src');
       lightboxImage.src = '';
     }
   }, 300);
