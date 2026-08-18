@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Explore the Jubilee Beauty School gallery featuring student work, beauty services, and life at our school."
+  />
+
+  <title>Gallery | Jubilee Beauty School</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="icon" type="image/png" href="DECAL.png" />
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+    <div class="container">
+
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="DECAL.png"
+            alt="Jubilee Beauty School logo"
+          />
+        </a>
+      </div>
+
+      <nav>
+
+        <button
+          class="menu-toggle"
+          onclick="toggleMenu()"
+          aria-label="Open navigation menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links">
+
+          <li>
+            <a href="index.html#home">
+              Home
+            </a>
+          </li>
+
+          <li class="dropdown">
+
+            <a href="index.html#programs">
+              Programs
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a href="index.html#program-cosmetologist">
+                  Cosmetologist
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#program-esthetician">
+                  Esthetician
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#program-hair-designer">
+                  Hair Designer
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#program-master-esthetician">
+                  Master Esthetician
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#program-manicurist">
+                  Manicurist
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#program-barber">
+                  Barber
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="gallery.html"
+              class="active-link"
+            >
+              Gallery
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#about">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+
+          <li class="nav-apply">
+            <a
+              class="nav-apply-link"
+              href="application.html"
+            >
+              Apply
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       PAGE HERO
+  ========================== -->
+
+  <section class="page-hero">
+
+    <div class="page-hero-content">
+
+      <p class="page-eyebrow">
+        Jubilee Beauty School
+      </p>
+
+      <h1>
+        Our Gallery
+      </h1>
+
+      <p>
+        Take a closer look at our students, their work,
+        and the hands-on experience at Jubilee Beauty School.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FULL GALLERY
+  ========================== -->
+
+  <main class="gallery-page">
+
+    <div class="gallery-page-heading">
+
+      <p class="pricing-label">
+        Student Work &amp; School Life
+      </p>
+
+      <h2>
+        Explore Jubilee
+      </h2>
+
+      <p>
+        Click any photo to view it larger.
+      </p>
+
+    </div>
+
+
+    <div class="full-gallery-grid">
+
+
+      <!-- EXISTING WEBSITE IMAGES -->
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('gallery1.jpg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="gallery1.jpg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('img1.JPG')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="img1.JPG"
+          alt="Jubilee Beauty School student work"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('img2.JPG')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="img2.JPG"
+          alt="Jubilee Beauty School student work"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('img3.JPG')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="img3.JPG"
+          alt="Jubilee Beauty School student work"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('img4.JPG')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="img4.JPG"
+          alt="Jubilee Beauty School student work"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_8688.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_8688.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_8735.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_8735.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_8745.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_8745.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_8771.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_8771.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <!-- NEW ATTACHMENT IMAGES -->
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9196.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9196.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9173.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9173.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9114.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9114.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9174.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9174.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9198.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9198.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9115.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9115.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_2290.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_2290.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+
+      <button
+        class="full-gallery-item"
+        type="button"
+        onclick="openLightbox('IMG_9197.jpeg')"
+        aria-label="View gallery image"
+      >
+        <img
+          src="IMG_9197.jpeg"
+          alt="Jubilee Beauty School gallery"
+          loading="lazy"
+        />
+      </button>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       LIGHTBOX
+  ========================== -->
+
+  <div
+    class="gallery-lightbox"
+    id="galleryLightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      type="button"
+      onclick="closeLightbox()"
+      aria-label="Close image"
+    >
+      <i class="fas fa-xmark"></i>
+    </button>
+
+
+    <button
+      class="lightbox-arrow lightbox-arrow-left"
+      type="button"
+      onclick="previousLightboxImage()"
+      aria-label="Previous image"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+
+    <img
+      src=""
+      alt="Expanded Jubilee Beauty School gallery image"
+      id="lightboxImage"
+    />
+
+
+    <button
+      class="lightbox-arrow lightbox-arrow-right"
+      type="button"
+      onclick="nextLightboxImage()"
+      aria-label="Next image"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+  </div>
+
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="gallery-cta">
+
+    <div>
+
+      <p class="pricing-label">
+        Interested in Jubilee?
+      </p>
+
+      <h2>
+        Start Your Beauty Career
+      </h2>
+
+      <p>
+        Explore our programs and take the next step toward
+        a career in the beauty industry.
+      </p>
+
+
+      <div class="services-contact-buttons">
+
+        <a
+          href="application.html"
+          class="cta service-cta"
+        >
+          Apply Now
+        </a>
+
+        <a
+          href="index.html#programs"
+          class="service-secondary-button"
+        >
+          View Programs
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © 2024 Jubilee Beauty School. All rights reserved.
+    </p>
+
+
+    <div class="social-icons">
+
+      <a
+        href="https://www.facebook.com/people/Julibee-Beauty-School/61565403652283/#"
+        target="_blank"
+        aria-label="Facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/jubileebeautyschool/"
+        target="_blank"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+
+
+      <a
+        href="https://canvas.instructure.com/"
+        target="_blank"
+        aria-label="Canvas"
+      >
+        <i class="fas fa-chalkboard-teacher"></i>
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
