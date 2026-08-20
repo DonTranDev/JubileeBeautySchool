@@ -3,199 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta
-    name="description"
-    content="Jubilee Beauty School offers beauty education programs in cosmetology, esthetics, master esthetics, manicuring, barbering, hair design, and instructor training."
-  />
-
-  <meta
-    name="keywords"
-    content="Jubilee Beauty School, beauty school, cosmetology school, esthetician school, master esthetician, manicurist school, nail technology, barber school, hair design, instructor training, beauty programs"
-  />
-
+  <meta name="description" content="Jubilee Beauty School offers beauty education programs in cosmetology, esthetics, master esthetics, manicuring, barbering, hair design, and instructor training." />
+  <meta name="keywords" content="Jubilee Beauty School, beauty school, cosmetology school, esthetician school, master esthetician, manicurist school, nail technology, barber school, hair design, instructor training, beauty programs" />
   <meta name="author" content="Jubilee Beauty School" />
-
   <meta property="og:title" content="Jubilee Beauty School" />
-
-  <meta
-    property="og:description"
-    content="Apply to Jubilee Beauty School and explore programs in cosmetology, esthetics, barbering, manicuring, hair design, and instructor training."
-  />
-
+  <meta property="og:description" content="Apply to Jubilee Beauty School and explore programs in cosmetology, esthetics, barbering, manicuring, hair design, and instructor training." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="DECAL.png" />
-
   <title>Jubilee Beauty School</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="DECAL.png" />
 </head>
 
 <body>
-
-  <!-- ========================================
-       NAVBAR
-  ========================================= -->
-
   <header class="navbar appear" data-appear-order="-1">
     <div class="container">
-
       <div class="logo">
-        <img
-          src="DECAL.png"
-          alt="Jubilee Beauty School logo"
-        />
+        <img src="DECAL.png" alt="Jubilee Beauty School logo" />
       </div>
 
       <nav>
-
-        <button
-          class="menu-toggle"
-          onclick="toggleMenu()"
-          aria-label="Open navigation menu"
-        >
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
           <i class="fas fa-bars"></i>
         </button>
 
         <ul class="nav-links">
-
-          <li>
-            <a href="#home">Home</a>
-          </li>
-
-          <!-- PROGRAMS DROPDOWN -->
+          <li><a href="#home">Home</a></li>
 
           <li class="dropdown">
-
-            <a href="#programs">
-              Programs
-            </a>
+            <a href="#programs">Programs</a>
 
             <ul class="dropdown-menu">
-
-              <li>
-                <a href="#program-cosmetologist">
-                  Cosmetologist
-                </a>
-              </li>
-
-              <li>
-                <a href="#program-esthetician">
-                  Esthetician
-                </a>
-              </li>
-
-              <li>
-                <a href="#program-hair-designer">
-                  Hair Designer
-                </a>
-              </li>
-
-              <li>
-                <a href="#program-master-esthetician">
-                  Master Esthetician
-                </a>
-              </li>
-
-              <li>
-                <a href="#program-manicurist">
-                  Manicurist
-                </a>
-              </li>
-
-              <li>
-                <a href="#program-barber">
-                  Barber
-                </a>
-              </li>
-
+              <li><a href="#program-cosmetologist">Cosmetologist</a></li>
+              <li><a href="#program-esthetician">Esthetician</a></li>
+              <li><a href="#program-hair-designer">Hair Designer</a></li>
+              <li><a href="#program-master-esthetician">Master Esthetician</a></li>
+              <li><a href="#program-manicurist">Manicurist</a></li>
+              <li><a href="#program-barber">Barber</a></li>
             </ul>
           </li>
 
-          <!-- NEW GALLERY PAGE -->
-
-          <li>
-            <a href="gallery.html">
-              Gallery
-            </a>
-          </li>
-
-          <!-- NEW SERVICES PAGE -->
-
-          <li>
-            <a href="services.html">
-              Services
-            </a>
-          </li>
-
-          <li>
-            <a href="#about">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact">
-              Contact
-            </a>
-          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
 
           <li class="nav-apply">
-            <a
-              class="nav-apply-link"
-              href="application.html"
-            >
-              Apply
-            </a>
+            <a class="nav-apply-link" href="application.html">Apply</a>
           </li>
-
         </ul>
       </nav>
-
     </div>
   </header>
 
-
-  <!-- ========================================
-       HERO
-  ========================================= -->
-
   <section class="hero" id="home">
-
     <div class="hero-inner">
 
-      <!-- LEFT SIDE -->
-
       <div class="hero-left">
-
         <div class="hero-content">
-
-          <h1
-            class="appear"
-            data-appear-order="0"
-          >
+          <h1 class="appear" data-appear-order="0">
             Where Beauty Meets Expertise
           </h1>
 
-          <p
-            class="appear"
-            data-appear-order="1"
-          >
+          <p class="appear" data-appear-order="1">
             Empowering the next generation of beauty professionals.
           </p>
 
@@ -206,16 +81,10 @@
           >
             Explore Programs
           </button>
-
         </div>
-
       </div>
 
-
-      <!-- RIGHT SIDE -->
-
       <div class="hero-right">
-
         <img
           src="IMG_4543-Photoroom.png"
           alt="Jubilee Beauty School students"
@@ -223,63 +92,34 @@
           data-appear-order="3"
           loading="eager"
         />
-
       </div>
 
     </div>
-
   </section>
 
-
-  <!-- ========================================
-       BUILDING BANNER
-  ========================================= -->
-
   <section class="building-banner">
-
     <img
       src="IMG_7609.jpeg"
       alt="Jubilee Beauty School Building"
       class="building-banner-image"
     />
-
   </section>
-
-
-  <!-- ========================================
-       PROGRAMS
-  ========================================= -->
 
   <section class="programs" id="programs">
 
-    <h2 class="section-title">
-      Our Programs
-    </h2>
+    <h2 class="section-title">Our Programs</h2>
 
     <div class="program-list">
 
-
-      <!-- ==============================
-           COSMETOLOGIST
-      =============================== -->
-
-      <div
-        class="program-item"
-        id="program-cosmetologist"
-      >
-
+      <div class="program-item" id="program-cosmetologist">
         <button class="accordion-button">
-
           Cosmetologist
-
           <img
             src="cosmetology.jpg"
             alt="Cosmetologist"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -290,111 +130,73 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This course trains students in cutting, styling,
                   chemical services, and salon practices, and provides
                   a basic introduction to manicuring and esthetics.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   state board’s theory and practical exams will be
                   licensed cosmetologists.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 53 Weeks – 30 hours per week
                   <br />
                   • 70 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  1600 Hours
-                </p>
-
+                <p>1600 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
 
-
-      <!-- ==============================
-           ESTHETICIAN
-      =============================== -->
-
-      <div
-        class="program-item"
-        id="program-esthetician"
-      >
-
+      <div class="program-item" id="program-esthetician">
         <button class="accordion-button">
-
           Esthetician
-
           <img
             src="esthetician.jpg"
             alt="Esthetician"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -405,111 +207,73 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This course teaches the fundamentals of skin care
                   treatments, facial massage, hair removal, body wraps,
                   and body treatments.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   state board’s theory and practical exams will be
                   licensed estheticians.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 25 Weeks – 30 hours per week
                   <br />
                   • 33 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  750 Hours
-                </p>
-
+                <p>750 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
 
-
-      <!-- ==============================
-           HAIR DESIGNER
-      =============================== -->
-
-      <div
-        class="program-item"
-        id="program-hair-designer"
-      >
-
+      <div class="program-item" id="program-hair-designer">
         <button class="accordion-button">
-
           Hair Designer
-
           <img
             src="hair-design.jpg"
             alt="Hair Designer"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -520,110 +284,75 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This course trains students in cutting, styling,
                   chemical services, and salon practices, and provides
                   an introduction to esthetics and other salon services.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   state board’s exams will be licensed hair designers.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 46.75 Weeks – 30 hours per week
                   <br />
                   • 61 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  1400 Hours
-                </p>
-
+                <p>1400 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
-
-
-      <!-- ==============================
-           MASTER ESTHETICIAN
-      =============================== -->
 
       <div
         class="program-item"
         id="program-master-esthetician"
       >
-
         <button class="accordion-button">
-
           Master Esthetician
-
           <img
             src="master-esthetician.jpg"
             alt="Master Esthetician"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -634,110 +363,72 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This advanced esthetics course expands on foundational
                   skincare training with advanced treatments and techniques.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   required state board exams will be prepared for
                   licensure as master estheticians.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 15 Weeks – 30 hours per week
                   <br />
                   • 20 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  450 Hours
-                </p>
-
+                <p>450 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
 
-
-      <!-- ==============================
-           MANICURIST
-      =============================== -->
-
-      <div
-        class="program-item"
-        id="program-manicurist"
-      >
-
+      <div class="program-item" id="program-manicurist">
         <button class="accordion-button">
-
           Manicurist
-
           <img
             src="manicurist.jpg"
             alt="Manicurist"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -748,109 +439,71 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This course covers nail care, manicures, pedicures,
                   acrylics, gels, nail art, and sanitation procedures.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   state board’s exams will be licensed manicurists.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 20 Weeks – 30 hours per week
                   <br />
                   • 27 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  600 Hours
-                </p>
-
+                <p>600 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
 
-
-      <!-- ==============================
-           BARBER
-      =============================== -->
-
-      <div
-        class="program-item"
-        id="program-barber"
-      >
-
+      <div class="program-item" id="program-barber">
         <button class="accordion-button">
-
           Barber
-
           <img
             src="barber.jpg"
             alt="Barber"
             class="program-image"
           />
-
         </button>
-
 
         <div class="accordion-content">
 
@@ -861,96 +514,65 @@
             Apply Now
           </button>
 
-
           <div class="sub-dropdowns">
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 DESCRIPTION
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   This course trains students in cutting, fades,
                   shaving, grooming, and classic and modern
                   barbering techniques.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 OBJECTIVE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   Students who complete the program and pass the
                   state board’s exams will be licensed barbers.
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 SCHEDULE
               </button>
 
               <div class="sub-dropdown-content">
-
                 <p>
                   • 33.5 Weeks – 30 hours per week
                   <br />
                   • 40.5 Weeks – 23 hours per week
                 </p>
-
               </div>
-
             </div>
 
-
             <div class="sub-dropdown">
-
               <button class="sub-dropdown-button">
                 HOURS
               </button>
 
               <div class="sub-dropdown-content">
-
-                <p>
-                  1000 Hours
-                </p>
-
+                <p>1000 Hours</p>
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </div>
 
     </div>
-
   </section>
-
-
-  <!-- ========================================
-       GALLERY
-  ========================================= -->
 
   <section class="gallery" id="gallery">
 
@@ -958,232 +580,149 @@
       Gallery
     </h2>
 
-
-    <!-- TOP ROW - MOVES LEFT -->
+    <!-- TOP ROW -->
 
     <div class="gallery-marquee">
-
       <div class="marquee-track">
 
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="gallery1.jpg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
+        <a href="gallery.html" class="gallery-link"><img src="gallery1.jpg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="img1.JPG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="img2.JPG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="img3.JPG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="img4.JPG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9114.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9173.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9196.jpeg" alt="Jubilee Beauty School gallery image" /></a>
 
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="img1.JPG"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="img2.JPG"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="img3.JPG"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="img4.JPG"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9114.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9173.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9196.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
+        <a href="gallery.html" class="gallery-link"><img src="IMG_7851.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0366.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0821.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0530.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_3427.JPEG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_5733.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0832.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8900.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8934.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_7849.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1928.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8937.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1634.jpg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_6265.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0906.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2412.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2370.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1788.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2213.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0324.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0718.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9912.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9171.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2228.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2357.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2206.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1044.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_6276.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1813.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_5725.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8928.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0781.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1238.PNG" alt="Jubilee Beauty School gallery image" /></a>
 
       </div>
-
     </div>
 
+    <!-- BOTTOM ROW -->
 
-    <!-- BOTTOM ROW - MOVES RIGHT -->
-
-    <div
-      class="gallery-marquee gallery-marquee--reverse"
-    >
-
+    <div class="gallery-marquee gallery-marquee--reverse">
       <div class="marquee-track">
 
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_8688.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8688.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8735.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8745.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8771.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9115.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9174.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9198.jpeg" alt="Jubilee Beauty School gallery image" /></a>
 
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_8735.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_8745.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_8771.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9115.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9174.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
-
-        <a href="gallery.html" class="gallery-link">
-          <img
-            src="IMG_9198.jpeg"
-            alt="Jubilee Beauty School gallery image"
-          />
-        </a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2352.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0786.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1752.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_3681.JPEG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0643.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0308.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1651.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8898.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0909.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1767.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1440.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_6273.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0100.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9705.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2194.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1673.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1519.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0897.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0098.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9696.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1945.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_8931.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0327.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9901.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2225.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1939.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_1034.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9939.JPEG" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_2126.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_9116.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0959.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0903.jpeg" alt="Jubilee Beauty School gallery image" /></a>
+        <a href="gallery.html" class="gallery-link"><img src="IMG_0139.jpeg" alt="Jubilee Beauty School gallery image" /></a>
 
       </div>
-
     </div>
 
   </section>
 
-
-  <!-- ========================================
-       SERVICES
-  ========================================= -->
-
-  <section
-    class="services"
-    id="services"
-  >
+  <section class="services" id="services">
 
     <h2 class="section-title">
       Services
     </h2>
 
     <p class="about-text">
-
       We offer high-quality beauty services to the public,
       provided by our students under licensed instructor
       supervision. Select a category to see the full service
       and pricing list.
-
     </p>
-
 
     <div class="services-grid">
 
-
-      <!-- HAIR -->
-
-      <a
-        href="services.html#hair"
-        class="service-card"
-      >
-
-        <h3>
-          Hair Services
-        </h3>
-
+      <a href="services.html#hair" class="service-card">
+        <h3>Hair Services</h3>
         <p>
           Haircuts, styling, color, perms, and treatments.
         </p>
-
       </a>
 
-
-      <!-- SKIN -->
-
-      <a
-        href="services.html#skin"
-        class="service-card"
-      >
-
-        <h3>
-          Skin &amp; Esthetics
-        </h3>
-
+      <a href="services.html#skin" class="service-card">
+        <h3>Skin &amp; Esthetics</h3>
         <p>
           Facials, waxing, lashes, brows, and skincare.
         </p>
-
       </a>
 
-
-      <!-- NAILS -->
-
-      <a
-        href="services.html#nails"
-        class="service-card"
-      >
-
-        <h3>
-          Nail Services
-        </h3>
-
+      <a href="services.html#nails" class="service-card">
+        <h3>Nail Services</h3>
         <p>
           Manicures, pedicures, extensions, and nail art.
         </p>
-
       </a>
 
-
     </div>
-
   </section>
 
-
-  <!-- ========================================
-       ABOUT
-  ========================================= -->
-
-  <section
-    class="about"
-    id="about"
-  >
+  <section class="about" id="about">
 
     <div class="about-overlay">
 
@@ -1192,7 +731,6 @@
       </h2>
 
       <p class="about-text">
-
         Jubilee Beauty School nurtures talent through hands-on
         training, small class sizes, and a supportive learning
         environment.
@@ -1203,75 +741,41 @@
 
         From cosmetology to esthetics and barbering, our programs
         are built to launch successful beauty careers.
-
       </p>
 
     </div>
-
   </section>
 
-
-  <!-- ========================================
-       CONTACT
-  ========================================= -->
-
-  <section
-    class="contact"
-    id="contact"
-  >
+  <section class="contact" id="contact">
 
     <h2 class="section-title">
       Contact Us
     </h2>
 
-
     <div class="contact-wrapper">
-
-
-      <!-- CONTACT INFORMATION -->
 
       <div class="contact-info">
 
         <p>
-
-          <strong>
-            Address:
-          </strong>
-
+          <strong>Address:</strong>
           16824 44th Ave W, Lynnwood, WA 98037
-
         </p>
 
-
         <p>
-
-          <strong>
-            Phone:
-          </strong>
-
+          <strong>Phone:</strong>
           <a href="tel:12063487983">
             (206) 348-7983
           </a>
-
         </p>
 
-
         <p>
-
-          <strong>
-            Email:
-          </strong>
-
+          <strong>Email:</strong>
           <a href="mailto:jubileebeautyschool@gmail.com">
             jubileebeautyschool@gmail.com
           </a>
-
         </p>
 
       </div>
-
-
-      <!-- GOOGLE MAP -->
 
       <div class="contact-map">
 
@@ -1287,22 +791,14 @@
         </iframe>
 
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- ========================================
-       FOOTER
-  ========================================= -->
 
   <footer>
 
     <p>
       © 2024 Jubilee Beauty School. All rights reserved.
     </p>
-
 
     <div class="social-icons">
 
@@ -1311,41 +807,27 @@
         target="_blank"
         aria-label="Facebook"
       >
-
         <i class="fab fa-facebook-f"></i>
-
       </a>
-
 
       <a
         href="https://www.instagram.com/jubileebeautyschool/"
         target="_blank"
         aria-label="Instagram"
       >
-
         <i class="fab fa-instagram"></i>
-
       </a>
-
 
       <a
         href="https://canvas.instructure.com/"
         target="_blank"
         aria-label="Canvas"
       >
-
         <i class="fas fa-chalkboard-teacher"></i>
-
       </a>
 
     </div>
-
   </footer>
-
-
-  <!-- ========================================
-       JAVASCRIPT
-  ========================================= -->
 
   <script src="script.js"></script>
 
